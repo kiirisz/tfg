@@ -1,0 +1,27 @@
+.colour{
+    background-color: tomato;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* generics */
+
+.third{
+    width: 33%;
+    margin: 7px;
+}
+
+.red{
+    background-color: tomato;
+}
+
+.blue{
+    background-color: cornflowerblue;
+}
+
+.yellow{
+    background-color: rgb(255, 217, 0);
+}
