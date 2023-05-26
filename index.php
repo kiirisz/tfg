@@ -1,4 +1,4 @@
-<?php include("template/cabecera.php"); ?>
+<?php include("front-end/template/header.php"); ?>
 
         <!-- dynamically generated thing goes here; for the time let's just write some text so as to signify you aren't following anyone -->
         <!-- TODO: this should hide once you're following someone -->
@@ -9,13 +9,13 @@
 
                 <p class="text-2xl font-bold">
                     You aren't following anyone yet!<br>
-                    Go to the <a href="#">Explore</a> page and follow a few accounts!    
+                    Go to the <a href="front-end/pages/posts.php">Explore</a> page and follow a few accounts!    
                 </p>
 
                 <div class="text-lg" id="linktest">
-                    We suggest <a href="profile.php">@kiiri</a>, <a href="#">@ciudadanoejemplar</a> and <a href="#">@ili</a>, but we're a bit biased
+                    We suggest <a href="front-end/pages/profile.php">@kiiri</a>, <a href="#">@ciudadanoejemplar</a> and <a href="#">@ili</a>, but we're a bit biased
                 </div>
             </div>
         </main>
 
-<?php include("template/pie.php"); ?>
+<?php include("front-end/template/footer.php"); ?>

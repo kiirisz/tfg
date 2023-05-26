@@ -587,13 +587,12 @@ video {
 }
 
 .bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: var(--body-color) !important;
 }
 
 .bg-slate-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  background-color: var(--primary-color-reverse);
 }
 
 .p-5 {
@@ -637,8 +636,7 @@ video {
 }
 
 .text-slate-800 {
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
+  color: var(--text-color);
 }
 
 .text-white {
@@ -700,19 +698,19 @@ video {
 /* Track */
 
 ::-webkit-scrollbar-track {
-  background: rgb(249 168 212);
+  background: var(--primary-color);
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(236 72 153);
+  background: var(--primary-color-reverse);
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(190 24 93);
+  background: var(--primary-color-reverse);
 }
 
 .hover\:rotate-180:hover {

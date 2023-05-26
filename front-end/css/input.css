@@ -44,10 +44,10 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(236 72 153);
+    background: rgb(159, 236, 72);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(190 24 93);
+    background: rgb(159, 236, 72);
   }
