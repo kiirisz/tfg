@@ -1,4 +1,4 @@
-# InstaClone Project Outline
+# InstaClone
 
 ## Overview
 InstaClone is a web-based application aiming to replicate the core functionalities of Instagram. It is built using HTML, CSS (with Tailwind CSS framework), and PHP. The project incorporates features such as displaying images from followed profiles, enabling post comments, and acting as a messaging app.
