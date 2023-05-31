@@ -9,7 +9,7 @@
 
                 <p class="text-2xl font-bold">
                     You aren't following anyone yet!<br>
-                    Go to the <a href="front-end/pages/posts.php">Explore</a> page and follow a few accounts!    
+                    Go to the <a href="front-end/pages/posts.php">Explore</a> page and follow a few accounts!   
                 </p>
 
                 <div class="text-lg" id="linktest">
