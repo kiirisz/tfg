@@ -23,6 +23,15 @@
     color: black;
 }
 
+footer > a{
+  text-decoration-line: none;
+}
+
+footer > a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* individual items */
 
 #navbar > * {
