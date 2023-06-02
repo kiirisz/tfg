@@ -15,5 +15,9 @@
 
             <!-- body of the profile -->
             <!-- TODO: load the images here -->
+
+            <?php
+            
+            ?>
         </main>
 <?php include("../template/footer.php"); ?>
