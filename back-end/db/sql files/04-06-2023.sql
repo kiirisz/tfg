@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2023 a las 19:56:50
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Jun 04, 2023 at 09:50 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `instagram`
+-- Database: `instagram`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comments`
+-- Table structure for table `comments`
 --
 
 CREATE TABLE `comments` (
@@ -39,7 +39,7 @@ CREATE TABLE `comments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `messages`
+-- Table structure for table `messages`
 --
 
 CREATE TABLE `messages` (
@@ -52,11 +52,11 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `posts`
+-- Table structure for table `posts`
 --
 
 CREATE TABLE `posts` (
-  `idPost` int(255) NOT NULL,
+  `idPost` int(11) NOT NULL,
   `images` varchar(1000) NOT NULL,
   `caption` varchar(1000) NOT NULL,
   `likes` int(255) NOT NULL,
@@ -66,16 +66,18 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `posts`
+-- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`idPost`, `images`, `caption`, `likes`, `email`, `uploadDate`, `commentsNumber`) VALUES
-(2, 'nube.png', 'Esto es un test', 0, 'test@gmail.com', '2023-05-14', 0);
+(5, '1685907306.png', 'gatitos !!!!!!!!!!!', 0, 'kiiri@kuenty.com', '2023-06-04', 0),
+(6, '1685907321.png', 'gatetes !!!!!!!!!!!', 0, 'kiiri@kuenty.com', '2023-06-04', 0),
+(7, '1685907337.png', 'gatillos !!!!!!!!!!!', 0, 'kiiri@kuenty.com', '2023-06-04', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -89,29 +91,29 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `comments`
+-- Indexes for table `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`idComment`);
 
 --
--- Indices de la tabla `messages`
+-- Indexes for table `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`userRecipient`);
 
 --
--- Indices de la tabla `posts`
+-- Indexes for table `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`idPost`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`idUser`),
@@ -119,27 +121,27 @@ ALTER TABLE `users`
   ADD KEY `userName` (`userName`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `posts`
+-- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `idPost` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `idUser` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`IdPost`) REFERENCES `posts` (`idPost`) ON UPDATE CASCADE,
