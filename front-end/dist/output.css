@@ -556,6 +556,10 @@ video {
   width: 100%;
 }
 
+.resize-none {
+  resize: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -566,10 +570,6 @@ video {
 
 .justify-end {
   justify-content: flex-end;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-md {

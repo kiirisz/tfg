@@ -50,9 +50,8 @@ if (isset($_FILES['imginput'])) {
     $date = date('Y-m-d', $timestamp);
     $images = $timestamp . '.' . $imginputType;
     $caption = $_POST['caption'];
-    $email = "test@test.com"; // TODO: actually retrieve the email from the session instead of whatever this is
+    $email = "kiiri@kuenty.com"; // TODO: actually retrieve the email from the session instead of whatever this is
 
-    // TODO: save the image ID and other data on the database
     // NOTE: idPost is omitted because it's meant to be auto-assigned by sql
     $insertImage = "INSERT INTO `posts` (`images`, `caption`, `likes`, `email`, `uploadDate`, `commentsNumber`) VALUES (             
     :images, 
@@ -75,7 +74,9 @@ if (isset($_FILES['imginput'])) {
 
     $sentenciaSQL->execute();
 
+    // Redirect the user to profile page
+    header("Location: ../../front-end/pages/profile.php");
+    exit;
 }
-
 
 ?>

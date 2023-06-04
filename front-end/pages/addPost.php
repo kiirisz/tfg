@@ -1,40 +1,28 @@
-<?php 
+<?php
 include("../template/header.php");
 include("../../back-end/actions/add.php");
 ?>
 
-<main class="h-full bg-slate-200 w-full flex flex-col items-center">
-    <div class="col-md-5">
-        <div>
-            <div>
-                <h3>New Post</h3>
-            </div>
-            <div>
-                <form method="POST" enctype="multipart/form-data" action="add.php">
-                    <div class = "form-group">
-                        <label for="nombreArchivo">Image:</label>
-                        <br/>
-                        <?php 
-                        if ($nombreArchivo!="") { ?>
-                        <img class="img-thumbnail rounded" src="../../img/<?php echo $nombreArchivo;?>" width="150" alt="" srcset=""/>
-                        <?php } ?>
-                        <input type="file" class="form-control" id="nombreArchivo" name="nombreArchivo" placeholder="ID">
-                    </div>
 
-                    <div class = "form-group">
-                        <label for="txtAutor">Caption:</label>
-                        <input type="text" required class="form-control" value="<?php echo $postCaption; ?>" id="postCaption" name="postCaption" placeholder="Write a caption...">
-                    </div>
-                        
-                    <div class="btn-group" role="group" aria-label="">
-                        <button type="submit" name="accion" value="Agregar" class="btn btn-success">Agregar</button>
-                        <a href="posts.php">Cancelar</a>
-                    </div>
-                </form>
-            </div>
-        </div>
+<main class="h-screen  w-full flex flex-col items-center bg-gradient-to-br from-pink-500 to-blue-500">
+
+    <div class="text-slate-800 bg-slate-200 flex flex-col items-center text-center my-auto px-5 rounded-md p-5">
+        <!-- i am ready and willing to delete php from existence if this doesn't work -->
+        <form id="addImage" action="../../back-end/actions/add.php" method="post" enctype="multipart/form-data" class="my-auto">
+            <label for="imginput" class="text-2xl">Upload image...</label><br>
+            <input type="file" name="imginput" id="imginput" accept="image/png, image/jpeg"> <br><br>
+
+            <label for="caption" class="text-2xl">Caption</label><br>
+            <textarea name="caption" id="caption" cols="30" rows="10" class="bg-inherit border-b-slate-400 border-solid border-2 hover:border-b-slate-600 transition ease-in-out resize-none"></textarea>
+            <br><br>
+
+
+            <input type="submit" value="Submit"
+                class="bg-pink-500 hover:bg-pink-900 transition ease-in-out text-white p-2 font-bold rounded-md">
+        </form>
     </div>
 </main>
 
 <?php
-include("../template/footer.php");?>
+include("../template/footer.php");
+?>
