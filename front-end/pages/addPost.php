@@ -12,13 +12,13 @@ include("../../back-end/actions/add.php");
             <div>
                 <form method="POST" enctype="multipart/form-data" action="add.php">
                     <div class = "form-group">
-                        <label for="postImage">Image:</label>
+                        <label for="nombreArchivo">Image:</label>
                         <br/>
                         <?php 
-                        if ($postImage!="") { ?>
-                        <img class="img-thumbnail rounded" src="../../img/<?php echo $postImage;?>" width="150" alt="" srcset=""/>
+                        if ($nombreArchivo!="") { ?>
+                        <img class="img-thumbnail rounded" src="../../img/<?php echo $nombreArchivo;?>" width="150" alt="" srcset=""/>
                         <?php } ?>
-                        <input type="file" class="form-control" id="postImage" name="postImage" placeholder="ID">
+                        <input type="file" class="form-control" id="nombreArchivo" name="nombreArchivo" placeholder="ID">
                     </div>
 
                     <div class = "form-group">
