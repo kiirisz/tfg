@@ -1,7 +1,9 @@
 <?php
 include("../../back-end/db/db.php");
 
-$accion = 'asasa';
+// all this is alberto's code, which i'm leaving here in case we need it 
+
+/* $accion = 'asasa';
 $accion=(isset($_POST['accion']))?$_POST['accion']:"";
 
 switch ($accion) {
@@ -33,6 +35,53 @@ switch ($accion) {
         $sentenciaSQL->execute();
         break;
 }
+ */
 
 
+ if (isset($_FILES['imginput'])) {
+    // echo "traza";
+
+    $targetDir = '../db/uploads/';                                          // upload directory
+    $targetFile = $targetDir . basename($_FILES['imginput']['name']);      // the directory+the file
+    $uploadOk = 1;
+    $imginputType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // this stores the extension
+
+    // Check if the uploaded file is an image
+    $check = getimagesize($_FILES['imginput']['tmp_name']);
+    if ($check === false) {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+
+    // TODO: make it so image names are substituted with a generated numeric ID
+    // Check if the file already exists
+    if (file_exists($targetFile)) {
+        echo "File already exists.";
+        $uploadOk = 0;
+    }
+
+    // Check file size (needed, if we want to account for people being silly)
+    if ($_FILES['imginput']['size'] > 10000000) {   // 10mb
+        echo "File is too large.";
+        $uploadOk = 0;
+    }
+
+    // Allow only specific file formats
+    $allowedFormats = array('jpg', 'jpeg', 'png');
+    if (!in_array($imginputType, $allowedFormats)) {           // checking if the format is allowed
+        echo "Only JPG, JPEG, and PNG files are allowed.";
+        $uploadOk = 0;
+    }
+
+    // If all checks pass, move the uploaded file to the target directory
+    if ($uploadOk == 1) {
+        if (move_uploaded_file($_FILES['imginput']['tmp_name'], $targetFile)) {
+            echo "Image uploaded successfully.";
+        } else {
+            echo "Error uploading the image.";
+        }
+    }
+}
+
+// TODO: save the image ID and other data on the database
 ?>

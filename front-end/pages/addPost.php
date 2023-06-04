@@ -10,7 +10,7 @@ include("../../back-end/actions/add.php");
                 <h3>New Post</h3>
             </div>
             <div>
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" enctype="multipart/form-data" action="add.php">
                     <div class = "form-group">
                         <label for="postImage">Image:</label>
                         <br/>
