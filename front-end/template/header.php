@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kuenty</title>
 
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
@@ -31,9 +31,9 @@
                         <img src="img/Logo_1_reverse.svg" alt="">
                     </span>
                     <div class="text logo-text">
-                        <span class="name">InstaClone</span>
+                        <span class="name">Kuenty</span>
                         <span class="profession">
-                        <p>The real people's social media</p></span>
+                        <p>For real people</p></span>
                     </div>
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
@@ -46,7 +46,7 @@
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
-                            <a href="/tfg-main">
+                            <a href="/tfg">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
@@ -64,7 +64,7 @@
                             </a>
                         </li>
                         <li class="navbar-link">
-                            <a href="#">
+                            <a href="front-end/pages/login.php">
                                 <i class='bx bx-user icon'></i>
                                 <span class="text nav-text">My account</span>
                             </a>
