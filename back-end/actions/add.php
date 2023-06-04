@@ -1,50 +1,20 @@
 <?php
 include("../../back-end/db/db.php");
 
-// all this is alberto's code, which i'm leaving here in case we need it 
+$timestamp = time(); // Get the current timestamp 
 
-/* $accion = 'asasa';
-$accion=(isset($_POST['accion']))?$_POST['accion']:"";
+// this receives the image, makes all pertinent checks, renames it and throws it into the folder
+if (isset($_FILES['imginput'])) {
 
-switch ($accion) {
-    case 'Agregar':
-        $idPost=(isset($_POST['idPost']))?$_POST['idPost']:"";
-        $userEmail=(isset($_POST['email']))?$_POST['email']:"";
-        $postImage=(isset($_FILES['images']['name']))?$_FILES['images']['name']:"";
-        $postCaption=(isset($_POST['caption']))?$_POST['caption']:"";
-        $postLikes=(isset($_POST['likes']))?$_POST['likes']:"";
-        $postUploadDate=(isset($_POST['uploadDate']))?$_POST['uploadDate']:"";
-        $postCommentsNumber=(isset($_POST['commentsNumber']))?$_POST['commentsNumber']:"";
-
-        // Sequence to start database
-        $sentenciaSQL = $conexion->prepare("INSERT INTO Posts (email, caption, likes, images, uploadDate, commentsNumber) VALUES (:email,:caption,:likes,:images,:uploadDate,:commentsNumber);");
-
-        $date = new DateTime();
-        // In case there are more than one document with the same name
-        $nombreArchivo = ($postImage!="")?$date->getTimestamp()."_".$_FILES["images"]["idPost"]:["imagen.jpg"];
-
-        $postUploadDate = $date->format('d-m-Y H:i:s');
-        $postCommentsNumber = 0;
-
-        $sentenciaSQL->bindParam(':email',$userEmail);
-        $sentenciaSQL->bindParam(':images',$nombreArchivo[0]);
-        $sentenciaSQL->bindParam(':caption',$postCaption);
-        $sentenciaSQL->bindParam(':likes',$postLikes);
-        $sentenciaSQL->bindParam(':uploadDate',$postUploadDate);
-        $sentenciaSQL->bindParam(':commentsNumber',$postCommentsNumber);
-        $sentenciaSQL->execute();
-        break;
-}
- */
-
-
- if (isset($_FILES['imginput'])) {
-    // echo "traza";
-
-    $targetDir = '../db/uploads/';                                          // upload directory
-    $targetFile = $targetDir . basename($_FILES['imginput']['name']);      // the directory+the file
+    $targetDir = '../db/uploads/'; // upload directory
+    $targetFile = $targetDir . basename($_FILES['imginput']['name']); // the directory+the file
     $uploadOk = 1;
     $imginputType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // this stores the extension
+
+    // auto-generate a name for the image based on the current time
+    $targetFile = $targetDir . $timestamp . '.' . $imginputType; // Generate a unique filename using the timestamp
+
+
 
     // Check if the uploaded file is an image
     $check = getimagesize($_FILES['imginput']['tmp_name']);
@@ -53,25 +23,20 @@ switch ($accion) {
         $uploadOk = 0;
     }
 
-    // TODO: make it so image names are substituted with a generated numeric ID
-    // Check if the file already exists
-    if (file_exists($targetFile)) {
-        echo "File already exists.";
-        $uploadOk = 0;
-    }
-
     // Check file size (needed, if we want to account for people being silly)
-    if ($_FILES['imginput']['size'] > 10000000) {   // 10mb
+    if ($_FILES['imginput']['size'] > 10000000) { // 10mb
         echo "File is too large.";
         $uploadOk = 0;
     }
 
     // Allow only specific file formats
     $allowedFormats = array('jpg', 'jpeg', 'png');
-    if (!in_array($imginputType, $allowedFormats)) {           // checking if the format is allowed
+    if (!in_array($imginputType, $allowedFormats)) { // checking if the format is allowed
         echo "Only JPG, JPEG, and PNG files are allowed.";
         $uploadOk = 0;
     }
+
+
 
     // If all checks pass, move the uploaded file to the target directory
     if ($uploadOk == 1) {
@@ -81,7 +46,36 @@ switch ($accion) {
             echo "Error uploading the image.";
         }
     }
+
+    $date = date('Y-m-d', $timestamp);
+    $images = $timestamp . '.' . $imginputType;
+    $caption = $_POST['caption'];
+    $email = "test@test.com"; // TODO: actually retrieve the email from the session instead of whatever this is
+
+    // TODO: save the image ID and other data on the database
+    // NOTE: idPost is omitted because it's meant to be auto-assigned by sql
+    $insertImage = "INSERT INTO `posts` (`images`, `caption`, `likes`, `email`, `uploadDate`, `commentsNumber`) VALUES (             
+    :images, 
+    :caption, 
+    '0', 
+    :email, 
+    :uploadDate, 
+    '0'
+    ) 
+";
+
+    // bindings
+    $sentenciaSQL = $conexion->prepare($insertImage);
+
+    $sentenciaSQL->bindParam(':images', $images);
+    $sentenciaSQL->bindParam(':caption', $caption);
+    $sentenciaSQL->bindParam(':email', $email);
+    $sentenciaSQL->bindParam(':uploadDate', $date);
+
+
+    $sentenciaSQL->execute();
+
 }
 
-// TODO: save the image ID and other data on the database
+
 ?>

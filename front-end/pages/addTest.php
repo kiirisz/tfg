@@ -12,7 +12,10 @@ include("../../back-end/actions/add.php");
 
             <!-- i am ready and willing to delete php from existence if this doesn't work -->
             <form action="../../back-end/actions/add.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="imginput" id="imginput" accept="image/png, image/jpeg">
+                <input type="file" name="imginput" id="imginput" accept="image/png, image/jpeg">        <br>
+                <input type="text" name="caption" id="caption">                                         <br>
+                
+
                 <input type="submit" value="submit">
             </form>
         </div>
