@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuenty</title>
-    <link rel="icon" href="<?php echo $url;?>/img/basic_logo.svg" type="image/icon type">
+    <link rel="icon" href="<?php echo $url;?>/img/logo.svg" type="image/icon type">
 
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
@@ -23,13 +23,13 @@
         <!-- this is the heading where the logo will be -->
         <header class="font-bold text-2xl bg-slate-800 text-white vertical-text h-full p-5"></header>
         <!-- this is the menu -->
-        <!-- TODO: make this become amborgesa for responsivity at some point in the future -->
         <nav class="sidebar close">
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <img class="opened" src="<?php echo $url;?>/img/vertical_logo.svg" alt="">
-                        <img class="closed" src="<?php echo $url;?>/img/horizontal_logo.svg" alt="">
+                        <a href="<?php echo $url;?>/index.php">
+                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
+                        </a>
                     </span>
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
