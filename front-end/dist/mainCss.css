@@ -15,7 +15,7 @@
     --primary-color-reverse: #1e293b;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #1e293b;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -114,24 +114,58 @@ body.dark{
 }
 
 /*********** Images in the header of the navbar ***********/
-.sidebar.close .image .opened {
+body .sidebar.close .image .opened {
     width: 64px;
     border-radius: 6px;
     opacity: 1;
     display: unset;
 }
-.sidebar .image .opened {
+body .sidebar .image .opened {
+    opacity: 0;
+    display: none;
+}
+body.dark .sidebar.close .image .opened {
+    opacity: 0;
+    display: none;
+}
+body .sidebar.close .image .opened.dark{
+    opacity: 0;
+    display: none;
+}
+body.dark .sidebar.close .image .opened.dark{
     width: 64px;
     border-radius: 6px;
+    opacity: 1;
+    display: unset;
+}
+/**/
+body.dark .sidebar.close .image .closed.dark {
     opacity: 0;
     display: none;
 }
-.sidebar.close .image .closed {
-    width: 0px;
+body .sidebar.close .image .closed {
     opacity: 0;
     display: none;
 }
-.sidebar .image .closed {
+body .sidebar.close .image .closed.dark {
+    opacity: 0;
+    display: none;
+}
+body.dark .sidebar .image .closed {
+    opacity: 0;
+    display: none;
+}
+body .sidebar .image .closed.dark {
+    opacity: 0;
+    display: none;
+}
+body .sidebar .image .closed {
+    width: 170px;
+    border-radius: 6px;
+    opacity: 1;
+    display: unset;
+}
+body.dark .sidebar .image .closed.dark {
     width: 170px;
     border-radius: 6px;
     opacity: 1;
@@ -146,6 +180,7 @@ body.dark{
 .sidebar header .image-text{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .sidebar header .logo-text{
     display: flex;
@@ -326,16 +361,13 @@ body.dark .switch::before{
     transition: var(--tran-05);
 }
 .home .text{
-    font-size: 30px;
-    font-weight: 500;
     color: var(--text-color);
-    padding: 12px 60px;
 }
 
 .sidebar.close ~ .home{
-    left: 78px;
+    left: 95px;
     height: 80vh;
-    width: calc(100% - 78px);
+    width: calc(100% - 95px);
     height: 100vh;
 }
 body.dark .home .text{
