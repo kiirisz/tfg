@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuenty</title>
+    <link rel="icon" href="../../img/basic_logo.svg" type="image/icon type">
+    <link rel="icon" href="img/basic_logo.svg" type="image/icon type">
 
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
@@ -16,6 +18,7 @@
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <?php $url="http://".$_SERVER['HTTP_HOST']."/tfg" ?>
 </head>
 
 <body class="font-dmono ">
@@ -28,13 +31,9 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <img src="img/Logo_1_reverse.svg" alt="">
+                        <img class="opened" src="<?php echo $url;?>/img/vertical_logo.svg" alt="">
+                        <img class="closed" src="<?php echo $url;?>/img/horizontal_logo.svg" alt="">
                     </span>
-                    <div class="text logo-text">
-                        <span class="name">Kuenty</span>
-                        <span class="profession">
-                        <p>For real people</p></span>
-                    </div>
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
             </header>
@@ -46,15 +45,21 @@
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
-                            <a href="/tfg">
+                            <a href="<?php echo $url;?>">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
                         </li>
                         <li class="navbar-link">
-                            <a href="front-end/pages/addPost.php">
+                            <a href="<?php echo $url;?>/front-end/pages/addPost.php">
                                 <i class='bx bx-plus-circle icon'></i>
                                 <span class="text nav-text">Add Post</span>
+                            </a>
+                        </li>
+                        <li class="navbar-link">
+                            <a href="<?php echo $url;?>/front-end/pages/messages.php">
+                                <i class='bx bx-chat icon'></i>
+                                <span class="text nav-text">Messages</span>
                             </a>
                         </li>
                         <li class="navbar-link">
@@ -64,15 +69,9 @@
                             </a>
                         </li>
                         <li class="navbar-link">
-                            <a href="front-end/pages/login.php">
+                            <a href="<?php echo $url;?>/front-end/pages/login.php">
                                 <i class='bx bx-user icon'></i>
                                 <span class="text nav-text">My account</span>
-                            </a>
-                        </li>
-                        <li class="navbar-link">
-                            <a href="#">
-                                <i class='bx bx-heart icon' ></i>
-                                <span class="text nav-text">Likes</span>
                             </a>
                         </li>
                     </ul>
@@ -98,5 +97,4 @@
             </div>
         </nav>
         <!-- JavaScript for the navbar, DO NOT MOVE FROM HERE!!!!! -->
-        <script src="./front-end/js/navbar.js"></script>
-        <script src="../js/navbar.js"></script>
+        <script src="<?php echo $url;?>/front-end/js/navbar.js"></script>

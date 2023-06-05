@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.27 114.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e52823;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: CascadiaCodeRoman-SemiLight, 'Cascadia Code';
+        font-size: 60px;
+        font-variation-settings: 'wght' 350;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #1d1d1b;
+      }
+
+      .cls-4 {
+        fill: #e40134;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        fill: #c8006e;
+      }
+
+      .cls-10 {
+        fill: #aa1435;
+      }
+
+      .cls-11 {
+        fill: #9d111c;
+      }
+
+      .cls-6 {
+        fill: #e30613;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-7, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-12 {
+        fill: #c11011;
+      }
+
+      .cls-13 {
+        fill: #a41e1b;
+      }
+
+      .cls-14 {
+        fill: #8f0f28;
+      }
+
+      .cls-15 {
+        fill: #bd1111;
+      }
+
+      .cls-16 {
+        fill: #740e00;
+      }
+
+      .cls-17 {
+        fill: #be1d2f;
+      }
+
+      .cls-18 {
+        fill: #cd171d;
+      }
+    </style>
+  </defs>
+  <g id="Capa_2-2" data-name="Capa 2">
+    <text class="cls-1" transform="translate(135.96 81.07) scale(.99 1)"><tspan x="0" y="0">KUENTY</tspan></text>
+    <text class="cls-2" transform="translate(134.85 80.64) scale(.99 1)"><tspan x="0" y="0">KUENTY</tspan></text>
+    <polygon class="cls-10" points="58.16 36.24 34.5 45.44 4.8 15.55 58.16 36.24"/>
+    <polygon class="cls-9" points="59.49 36.83 83.91 46.3 59.49 70.56 35.27 46.18 59.49 36.83"/>
+    <polygon class="cls-4" points="86.52 46.3 117.79 15.12 117.94 58.51 86.52 46.3"/>
+    <path class="cls-16" d="M58.57,112.56l.1-40.08-25.54-25.83L1.62,58.9s-1.03,48.48,56.95,53.65Z"/>
+    <line class="cls-6" x1="59.52" y1="36.3" x2="33.89" y2="46.21"/>
+    <polygon class="cls-7" points="59.58 1.07 84 10.54 59.58 34.8 35.36 10.42 59.58 1.07"/>
+    <polygon class="cls-18" points="115.11 15.31 84.73 45.6 60.69 36.31 115.11 15.31"/>
+    <polygon class="cls-17" points="32.54 46.2 1.97 58.07 2 15.53 32.54 46.2"/>
+    <path class="cls-15" d="M59.79,112.22l.1-39.8,26.09-25.44,32.29,12.41s.99,48.44-58.48,52.83Z"/>
+    <g>
+      <line class="cls-8" x1="59.43" y1="112.85" x2="59.5" y2="70.65"/>
+      <line class="cls-8" x1=".76" y1="113.83" x2="118.5" y2="113.86"/>
+      <path class="cls-8" d="M1,58.94c-.09,29.54,26.13,53.53,58.64,53.63"/>
+      <line class="cls-8" x1="1" y1="13.6" x2="1" y2="59.6"/>
+      <line class="cls-8" x1="58.79" y1="72.71" x2="117.33" y2="14.54"/>
+      <line class="cls-8" x1="2.52" y1="14.65" x2="59.76" y2="72.25"/>
+      <line class="cls-5" x1="1" y1="13.6" x2="118.82" y2="59.32"/>
+      <line class="cls-5" x1="118.83" y1="13.38" x2=".94" y2="58.95"/>
+      <path class="cls-8" d="M118.82,59.32c-.09,29.53-26.5,53.35-59.03,53.25"/>
+      <line class="cls-8" x1="118.83" y1="13.38" x2="118.82" y2="59.39"/>
+      <ellipse class="cls-3" cx=".89" cy="13.71" rx=".64" ry=".9" transform="translate(-12.69 11.61) rotate(-77.5)"/>
+      <ellipse class="cls-3" cx="2.36" cy="14.88" rx=".55" ry=".81" transform="translate(-12.53 17.2) rotate(-89.82)"/>
+      <ellipse class="cls-3" cx="118.94" cy="13.48" rx=".9" ry=".64" transform="translate(-.18 25.3) rotate(-12.14)"/>
+      <ellipse class="cls-3" cx="117.61" cy="14.51" rx=".64" ry=".9" transform="translate(77.99 126.19) rotate(-77.5)"/>
+    </g>
+    <polygon class="cls-14" points="59.39 16.21 36.51 11.06 59.28 33.98 59.39 16.21"/>
+    <polygon class="cls-11" points="60.07 33.82 82.7 11.35 60.18 16.32 60.07 33.82"/>
+    <polygon class="cls-13" points="36.85 10.27 59.4 15.52 59.15 1.48 36.85 10.27"/>
+    <polygon class="cls-12" points="82.7 10.36 59.99 1.48 60.04 15.53 82.7 10.36"/>
+    <line class="cls-5" x1="59.58" y1="1.07" x2="59.79" y2="16.05"/>
+    <line class="cls-5" x1="59.58" y1="34.8" x2="59.79" y2="16.05"/>
+    <line class="cls-8" x1="35.36" y1="10.42" x2="59.79" y2="16.05"/>
+    <line class="cls-8" x1="84" y1="10.54" x2="59.79" y2="16.05"/>
+    <line class="cls-8" x1="59.69" y1="36.05" x2="119.09" y2="13.92"/>
+    <line class="cls-8" x1="58.87" y1="36.05" x2="1" y2="14.14"/>
+  </g>
+</svg>

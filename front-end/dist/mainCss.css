@@ -112,8 +112,29 @@ body.dark{
 .sidebar.close .image{
     margin-top: 20px;
 }
-.sidebar.close .image img{
-    width: 50px;
+/* Images in the header of the navbar */
+.sidebar.close .image .opened {
+    width: 64px;
+    border-radius: 6px;
+    opacity: 1;
+    display: unset;
+}
+.sidebar .image .opened {
+    width: 64px;
+    border-radius: 6px;
+    opacity: 0;
+    display: none;
+}
+.sidebar.close .image .closed {
+    width: 0px;
+    opacity: 0;
+    display: none;
+}
+.sidebar .image .closed {
+    width: 170px;
+    border-radius: 6px;
+    opacity: 1;
+    display: unset;
 }
 /* =========================== */
 
@@ -143,13 +164,10 @@ header .image-text .profession{
 }
 
 .sidebar header .image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .sidebar header .image img{
-    width: 40px;
+    width: 60px;
     border-radius: 6px;
 }
 
