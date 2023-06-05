@@ -112,7 +112,8 @@ body.dark{
 .sidebar.close .image{
     margin-top: 20px;
 }
-/* Images in the header of the navbar */
+
+/*********** Images in the header of the navbar ***********/
 .sidebar.close .image .opened {
     width: 64px;
     border-radius: 6px;
@@ -161,9 +162,6 @@ header .image-text .profession{
     margin-top: -2px;
     display: block;
     max-width: 160px;
-}
-
-.sidebar header .image{
 }
 
 .sidebar header .image img{

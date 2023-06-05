@@ -14,7 +14,7 @@ foreach($postsList as $posts){ ?>
 
     <div class="text-slate-800 text-center text-">
         <div>
-            <img src="./img/<?php echo $posts['images']; ?>" alt="post image">
+            <img src="<?php echo $url;?>/back-end/db/uploads/<?php echo $posts['images']; ?>" alt="post image">
              <div>
                 <h6><?php echo $posts['likes']; ?></h6>
                   <h3><?php echo $posts['caption']; ?></h3>
