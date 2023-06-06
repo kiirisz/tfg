@@ -1,20 +1,36 @@
-<?php include("head.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php $url="http://".$_SERVER['HTTP_HOST']."/tfg" ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuenty</title>
+    <link rel="icon" href="<?php echo $url;?>/img/logo.svg" type="image/icon type">
+
+    <!-- ooo the world wide web is out there oooo -->
+    <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/output.css">
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/mainCss.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 
 <body class="font-dmono ">
     <main class="flex h-screen">
         <!-- this is the heading where the logo will be -->
         <header class="font-bold text-2xl bg-slate-800 text-white vertical-text h-full p-5"></header>
         <!-- this is the menu -->
-        <!-- TODO: make this become amborgesa for responsivity at some point in the future -->
         <nav class="sidebar close">
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <img class="opened" src="<?php echo $url;?>/img/vertical_logo.svg" alt="">
-                        <img class="closed" src="<?php echo $url;?>/img/horizontal_logo.svg" alt="">
-                        <img class="opened dark" src="<?php echo $url;?>/img/vertical_logo_dark.svg" alt="">
-                        <img class="closed dark" src="<?php echo $url;?>/img/horizontal_logo_dark.svg" alt="">
-                        </span>
+                        <a href="<?php echo $url;?>/index.php">
+                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
+                        </a>
+                    </span>
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
             </header>
