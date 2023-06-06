@@ -26,7 +26,7 @@
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
-                            <a href="<?php echo $url;?>/input.php">
+                            <a href="<?php echo $url;?>/index.php">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
