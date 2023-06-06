@@ -7,28 +7,9 @@ if (isset($_SESSION['user_id'])) {
     // TODO: this should point to the as-yet-nonexistent home page
     header('Location: /php-login');
 }
+
+include("./front-end/template/head.php");
 ?>
-
-<!DOCTYPE html> <!-- this closes on the php file -->
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- ooo the world wide web is out there oooo -->
-    <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="./front-end/dist/output.css">
-    <link rel="stylesheet" href="./front-end/dist/mainCss.css">
-    <link rel="stylesheet" href="../dist/output.css">
-    <link rel="stylesheet" href="../dist/mainCss.css">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 
 <body class="font-dmono ">
     <main class=" flex">
