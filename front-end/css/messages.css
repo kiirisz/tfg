@@ -20,9 +20,11 @@ article.main{
 article.main section{
     display: block;
     width: 100%;
-    background-color: aquamarine;
     height: 100%;
     max-height: 70px;
+}
+article.main section.not-seen{
+    background-color: aquamarine;
 }
 article.main section .left{
     float: left;
