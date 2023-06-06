@@ -27,7 +27,7 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <a href="<?php echo $url;?>/index.php">
+                        <a href="<?php echo $url;?>/front-end/pages/posts.php">
                             <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
                         </a>
                     </span>
@@ -42,7 +42,7 @@
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
-                            <a href="<?php echo $url;?>/index.php">
+                            <a href="<?php echo $url;?>/front-end/pages/posts.php">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
