@@ -23,7 +23,6 @@ function printThings() {
         document.getElementById("container3").appendChild(testImage3);
 
         for (let index = 0; index < 3; index++) {
-
             document.getElementById('mainframe').childNodes
         }
         

@@ -7,6 +7,7 @@ session_start();
 
 <?php
 $email = $_SESSION['email'];
+$element = 1;
 $SQLsequence = $conexion->prepare("SELECT * FROM messages where userRecipient = '$email' && seen = 0");
 $SQLsequence->execute();
 $userList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
@@ -39,24 +40,36 @@ $userList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>
             <div class="right">
-                <div class='user_name' id="user_name"><?php echo $users['userSender']; ?></div>
+                <div class='user_name' id="user_name_<?php echo($element) ?>"><?php echo $users['userSender']; ?></div>
 
                 <?php if ($users['seen'] == 0) {?>
-                    <button class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3" onclick="showMessage()">Read message</button>
+                    <button id="read_button" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
                 <?php }else if ($users['seen'] == 1) {?>
-                    <div class='user_message'><?php echo $users['message']; ?></div>
+                    <div class='user_message_<?php echo($element) ?>'><?php echo $users['message']; ?></div>
                 <?php } ?>
             </div>
         </section>
-        <?php } ?>
+        <?php $element = $element+1; } ?>
     </article>
 </main>
 
 <script>
-    function showMessage() {
-        document.getElementById("user_name").insertAdjacentHTML("afterend","<div class='user_message'> <?php echo $users['message']; ?> </div>");
-        $users['seen'] = 1;
+    function showMessage(evento) {
+        document.getElementById("user_name_2").insertAdjacentHTML("afterend","<div class='user_message_<?php echo($element-1) ?>'> <?php echo $users['message']; ?> </div>");
+        button = document.getElementById("read_button_2");
+        button.remove();
     }
+
+    function asignarEventos(evento){
+        if (document.readyState == 'complete') {
+            var botonesNumeros = document.querySelectorAll('read_button');
+            for(let i=0;i<botonesNumeros.length;i++){
+                botonesNumeros[i].addEventListener('click',showMessage);
+            }
+        }
+    }
+
+    document.addEventListener("readystatechange", asignarEventos());
 </script>
 
 <?php
