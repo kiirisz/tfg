@@ -5,7 +5,7 @@ session_start();
 // If the user is already logged in, redirect them to the desired location
 if (isset($_SESSION['user_id'])) {
     // TODO: this should point to the as-yet-nonexistent home page
-    header('Location: ./front-end/pages/posts.php');
+    header('Location: ./front-end/pages/galeria.php');
 }
 
 include("./front-end/template/head.php");
