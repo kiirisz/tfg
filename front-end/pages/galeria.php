@@ -8,7 +8,7 @@
     <title>Kuenty</title>
     <link rel="icon" href="<?php echo $url;?>/img/logo.svg" type="image/icon type">
 
-    <link rel="stylesheet" href="grid-gallery.css" />
+    <link rel="stylesheet" href="../css/grid-gallery.css" />
 
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>

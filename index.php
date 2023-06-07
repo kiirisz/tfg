@@ -19,7 +19,6 @@ include("./front-end/template/head.php");
                     <img src="img/logo.svg" alt="kuenty logo" class=" w-40 mx-auto">
                     <h1>kuenty</h1>
                 </div>
-
                 <div class=" text-center">
                     <a href="front-end/pages/login.php">
                         <div
@@ -27,7 +26,6 @@ include("./front-end/template/head.php");
                             Log In
                         </div>
                     </a>
-
                     <a href="front-end/pages/register.php">
                         <div
                             class=" m-3 bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
@@ -37,8 +35,6 @@ include("./front-end/template/head.php");
                 </div>
             </section>
         </main>
-
         <aside class=" bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden md:flex"></aside>
-
     </main>
     <?php include("./front-end/template/footer.php"); ?>
