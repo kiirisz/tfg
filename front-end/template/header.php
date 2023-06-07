@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php $url="http://".$_SERVER['HTTP_HOST']."/tfg" ?>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuenty</title>
-    <link rel="icon" href="<?php echo $url;?>/img/logo.svg" type="image/icon type">
-
-    <!-- ooo the world wide web is out there oooo -->
-    <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/output.css">
-    <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/mainCss.css">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+<?php 
+session_start();
+include("head.php");
+?>
 
 <body class="font-dmono ">
     <main class="flex h-screen">
@@ -27,7 +12,7 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <a href="<?php echo $url;?>/index.php">
+                        <a href="<?php echo $url;?>/front-end/pages/posts.php">
                             <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
                         </a>
                     </span>
@@ -42,7 +27,7 @@
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
-                            <a href="<?php echo $url;?>">
+                            <a href="<?php echo $url;?>/front-end/pages/posts.php">
                                 <i class='bx bx-home-alt icon' ></i>
                                 <span class="text nav-text">Home</span>
                             </a>
@@ -60,13 +45,7 @@
                             </a>
                         </li>
                         <li class="navbar-link">
-                            <a href="#">
-                                <i class='bx bx-bell icon'></i>
-                                <span class="text nav-text">Notifications</span>
-                            </a>
-                        </li>
-                        <li class="navbar-link">
-                            <a href="<?php echo $url;?>/front-end/pages/login.php">
+                            <a href="<?php echo $url;?>/front-end/pages/profile.php">
                                 <i class='bx bx-user icon'></i>
                                 <span class="text nav-text">My account</span>
                             </a>

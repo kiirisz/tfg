@@ -879,6 +879,11 @@ footer>a:hover {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+<<<<<<< HEAD
+/*********/
+label:hover, input:hover{
+  cursor: pointer;
+=======
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -895,4 +900,5 @@ footer>a:hover {
   .md\:w-1\/2 {
     width: 50%;
   }
+>>>>>>> 41121258140d8237be1a184f7bbda71ab44d0c04
 }
