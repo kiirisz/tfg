@@ -14,7 +14,6 @@ article.header input{
 article.main{
     margin-top: 30px;
     width: 100%;
-    background-color: yellow;
     height: 100%;
 }
 article.main section{
@@ -24,7 +23,10 @@ article.main section{
     max-height: 70px;
 }
 article.main section.not-seen{
-    background-color: aquamarine;
+    background-color: rgba(218, 218, 218, 0.856);
+}
+article.main section.seen{
+    background-color: rgba(189, 189, 189, 0.616);
 }
 article.main section .left{
     float: left;
@@ -33,10 +35,14 @@ article.main section .left{
 }
 article.main section .right{
     float: right;
-    width: 92%;
+    width: 20%;
 }
 article.main section .user_image img{
     height: 100%;
     max-height: 70px;
     width: auto;
+}
+div#NoShow{
+    opacity: 0;
+    display: none;
 }

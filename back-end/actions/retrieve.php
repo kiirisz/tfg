@@ -4,7 +4,8 @@ include("../../back-end/db/db.php");
 
 // Sequence to start database
 // TODO: so far this is just an test but this should be replaced with actual code
-$sentenciaSQL = $conexion->prepare("SELECT * FROM POSTS WHERE email='kiiri@kuenty.com'");
+$email = $_SESSION['email'];
+$sentenciaSQL = $conexion->prepare("SELECT * FROM POSTS WHERE email='$email'");
 $sentenciaSQL -> execute();
 
 // this should yoink the stuff from the sql

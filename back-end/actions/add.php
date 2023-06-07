@@ -50,7 +50,8 @@ if (isset($_FILES['imginput'])) {
     $date = date('Y-m-d', $timestamp);
     $images = $timestamp . '.' . $imginputType;
     $caption = $_POST['caption'];
-    $email = "kiiri@kuenty.com"; // TODO: actually retrieve the email from the session instead of whatever this is
+    session_start();
+    $email = $_SESSION['email'];
 
     // NOTE: idPost is omitted because it's meant to be auto-assigned by sql
     $insertImage = "INSERT INTO `posts` (`images`, `caption`, `likes`, `email`, `uploadDate`, `commentsNumber`) VALUES (             

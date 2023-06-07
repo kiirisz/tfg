@@ -2,13 +2,11 @@
 include("../template/header.php");
 include("../../back-end/db/db.php");
 include("../../back-end/actions/search.php");
-session_start();
 ?>
 
 <?php
 $email = $_SESSION['email'];
-$element = 1;
-$SQLsequence = $conexion->prepare("SELECT * FROM messages where userRecipient = '$email' && seen = 0");
+$SQLsequence = $conexion->prepare("SELECT * FROM messages where userRecipient = '$email'");
 $SQLsequence->execute();
 $userList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -26,50 +24,34 @@ $userList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
     </article>
     <h3 class="text">Your messages</h3>
     <article class="main">
-        <?php foreach($userList as $users){ ?>
-            
-        <?php if ($users['seen'] == 0) {?>
-            <section class="not-seen">
-        <?php }else if ($users['seen'] == 1) {?>
-            <section class="seen">
-        <?php } ?>
-
+    <?php foreach($userList as $users){ ?>
+    <?php if ($users['seen'] == 0) {?>
+        <section class="not-seen">
+    <?php }else if ($users['seen'] == 1) {?>
+        <section class="seen">
+    <?php } ?>
             <div class="left">
                 <div class='user_image'>
                     <img src="../../img/basic_logo_dark.svg" alt="user image">
                 </div>
             </div>
             <div class="right">
-                <div class='user_name' id="user_name_<?php echo($element) ?>"><?php echo $users['userSender']; ?></div>
-
-                <?php if ($users['seen'] == 0) {?>
-                    <button id="read_button" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
-                <?php }else if ($users['seen'] == 1) {?>
-                    <div class='user_message_<?php echo($element) ?>'><?php echo $users['message']; ?></div>
-                <?php } ?>
+                <div class='userName_<?php echo $users['id'] ?>' id="userName"><?php echo $users['userSender']; ?></div>
+            <?php if ($users['seen'] == 0) {?>
+                <div id="NoShow" class='user_message_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
+                <button id="readButton_<?php echo $users['id'] ?>" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
+            <?php }else if ($users['seen'] == 1) {?>
+                <div id="Show" class='userMessage_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
+            <?php } ?>
             </div>
         </section>
-        <?php $element = $element+1; } ?>
+        <?php } ?>
     </article>
 </main>
-
-<script>
-    function showMessage(evento) {
-        document.getElementById("user_name_2").insertAdjacentHTML("afterend","<div class='user_message_<?php echo($element-1) ?>'> <?php echo $users['message']; ?> </div>");
-        button = document.getElementById("read_button_2");
-        button.remove();
-    }
-
-    function asignarEventos(evento){
-        if (document.readyState == 'complete') {
-            var botonesNumeros = document.querySelectorAll('read_button');
-            for(let i=0;i<botonesNumeros.length;i++){
-                botonesNumeros[i].addEventListener('click',showMessage);
-            }
-        }
-    }
-
-    document.addEventListener("readystatechange", asignarEventos());
+<script src="../js/messages.js">
+    <?php
+        include("../../back-end/actions/updateSeen.php");
+    ?>
 </script>
 
 <?php

@@ -30,7 +30,7 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <a href="<?php echo $url;?>/front-end/pages/posts.php">
+                        <a href="<?php echo $url;?>/front-end/pages/galeria.php">
                             <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
                         </a>
                     </span>
