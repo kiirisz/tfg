@@ -21,7 +21,7 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     $_SESSION['email'] = $results['email'];
 
     // TODO: point to homepage
-    header("Location: ../../front-end/pages/profile.php");
+    header("Location: ../../front-end/pages/galeria.php");
   } else {
     // If the credentials do not match, display an error message
     echo 'Sorry, those credentials do not match';

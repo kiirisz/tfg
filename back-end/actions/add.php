@@ -75,7 +75,7 @@ if (isset($_FILES['imginput'])) {
     $sentenciaSQL->execute();
 
     // Redirect the user to profile page
-    header("Location: ../../front-end/pages/profile.php");
+    header("Location: ../../front-end/pages/galeria.php");
     exit;
 }
 
