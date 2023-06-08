@@ -23,6 +23,7 @@ include("../template/head.php");
                     <input type="password" name="pass" id="pass"
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
+                        <input type="button" value="Sign up" onclick="window.location.href='register.php';" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
                     <input type="submit" value="Log In"
                         class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
                 </form>
