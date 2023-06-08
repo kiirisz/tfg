@@ -17,7 +17,7 @@ include("../../back-end/actions/add.php");
 
 
             <input type="submit" value="Submit"
-                class="bg-pink-500 hover:bg-pink-900 transition ease-in-out text-white p-2 font-bold rounded-md">
+                class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
         </form>
     </div>
 
