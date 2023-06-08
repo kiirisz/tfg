@@ -10,6 +10,7 @@ if (isset($_POST['userRecipient']) && isset($_POST['userSender']) && isset($_POS
     VALUES (:userRecipient, :userSender, :subject, :message, :seen, :date)";
 
     $SQLsequence = $conexion->prepare($query);
+    
     $SQLsequence->bindParam(':userRecipient', $_POST['userRecipient']);
     $SQLsequence->bindParam(':userSender', $_POST['userSender']);
     $SQLsequence->bindParam(':subject', $_POST['subject']);

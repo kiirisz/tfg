@@ -16,11 +16,11 @@ include("../template/head.php");
 
                 <form action="../../back-end/actions/login.php" method="POST">
                     <label for="username" class="text-2xl">Username</label><br>
-                    <input type="text" name="username" id="username"
+                    <input type="text" name="username" id="username" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="pass" class="text-2xl">Password</label><br>
-                    <input type="password" name="pass" id="pass"
+                    <input type="password" name="pass" id="pass" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                         <input type="button" value="Sign up" onclick="window.location.href='register.php';" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
@@ -36,7 +36,7 @@ include("../template/head.php");
 
         </main>
 
-        <aside class=" bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden md:flex"></aside>
+        <aside class=" bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden lg:flex"></aside>
 
     </main>
     <?php include("../template/footer.php"); ?>

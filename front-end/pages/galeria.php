@@ -4,7 +4,6 @@ include("../../back-end/db/db.php");
 ?>
 
 <?php
-
 $SQLsequence = $conexion->prepare("SELECT * FROM Posts");
 $SQLsequence->execute();
 $postsList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
