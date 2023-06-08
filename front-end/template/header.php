@@ -54,7 +54,7 @@ include("head.php");
                 </div>
                 <div class="bottom-content">
                     <li class="">
-                        <a href="#">
+                        <a href="<?php echo $url;?>/back-end/actions/logout.php">
                             <i class='bx bx-log-out icon' ></i>
                             <span class="text nav-text">Logout</span>
                         </a>
