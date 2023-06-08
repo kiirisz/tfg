@@ -22,7 +22,7 @@ function showMessage(event) {
 }
 
 function asignarEventos(event){
-    const buttons = document.getElementsByTagName("button");
+    const buttons = document.getElementsByClassName("readButton");
     for (let button of buttons) {
         button.addEventListener("click", showMessage);
     }

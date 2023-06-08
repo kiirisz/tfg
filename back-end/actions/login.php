@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     $_SESSION['username'] = $results['userName'];
     $_SESSION['email'] = $results['email'];
 
-    // TODO: point to homepage
+    // Redirects to homepage
     header("Location: ../../front-end/pages/galeria.php");
   } else {
     // If the credentials do not match, display an error message

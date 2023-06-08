@@ -3,7 +3,7 @@ include("../template/header.php");
 include("../../back-end/actions/retrieve.php");
 ?>
 
-<main class="h-full bg-slate-200 w-full flex flex-col items-center">
+<main class="home h-full bg-slate-200 w-full flex flex-col items-center">
 
     <!-- heading -->
     <div class="bg-pink-700 text-white w-full flex">

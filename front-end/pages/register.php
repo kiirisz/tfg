@@ -45,7 +45,6 @@ include("../template/head.php");
 
                     <input type="button" value="Login" onclick="window.location.href='login.php';" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
 
-
                 </form>
             </section>
         </main>
