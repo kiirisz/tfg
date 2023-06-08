@@ -26,4 +26,5 @@ include("../../back-end/actions/retrieve.php");
     }
     ?>
 </main>
+
 <?php include("../template/footer.php"); ?>
