@@ -7,8 +7,8 @@ $date = date('Y-m-d', time());
 // añadir aqui los campos para completar la tabla users de instagram
 
 if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])) {
-    $query = "INSERT INTO users (email, password, userName, birthDate, creationDate, phoneNumber) 
-    VALUES (:email, :password, :userName, :birthDate, :creationDate, :phoneNumber)";
+    $query = "INSERT INTO users (email, password, userName, birthDate, creationDate, phoneNumber, profilePic) 
+    VALUES (:email, :password, :userName, :birthDate, :creationDate, :phoneNumber, :profilePic)";
 
 
     $stmt = $conexion->prepare($query);
@@ -21,6 +21,7 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $stmt->bindParam(':birthDate', $_POST['date']);
     $stmt->bindParam(':creationDate', $date);
     $stmt->bindParam(':phoneNumber', $_POST['phone']);
+    $stmt->bindParam(':profilePic', $_POST['profilePic']);
 
     $stmt->execute();
 

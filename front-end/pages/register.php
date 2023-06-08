@@ -36,6 +36,9 @@ include("../template/head.php");
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
 
+                    <label for="profilePic" class="text-2xl">Profile pic</label><br>
+                    <input type="file" name="profilePic" id="photo"
+                        class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <input type="submit" value="Sign Up"
                         class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
