@@ -12,7 +12,7 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
   $records->bindParam(':userName', $_POST['username']);
   $records->execute();
   $results = $records->fetch(PDO::FETCH_ASSOC);
-
+  $message = '';
   // Check if a user with the provided userName exists and if the password matches
   if (count($results) > 0 && password_verify($_POST['pass'], $results['password'])) {
     // If the credentials match, set the user's ID in the session and redirect to the desired location
@@ -24,7 +24,8 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     header("Location: ../../front-end/pages/galeria.php");
   } else {
     // If the credentials do not match, display an error message
-    echo 'Sorry, those credentials do not match';
+    $message = 'Sorry, those credentials do not match';
+    
   }
 }
 

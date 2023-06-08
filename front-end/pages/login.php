@@ -26,9 +26,14 @@ include("../template/head.php");
                         <input type="button" value="Sign up" onclick="window.location.href='register.php';" class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
                     <input type="submit" value="Log In"
                         class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md">
-                </form>
+                        <?php if(!empty($message)): ?>
+                        <p> <?= $message ?></p>
+                        <?php endif; ?>
+                    </form>
 
             </section>
+            
+
         </main>
 
         <aside class=" bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden md:flex"></aside>
