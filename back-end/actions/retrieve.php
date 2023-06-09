@@ -10,6 +10,4 @@ $sentenciaSQL -> execute();
 
 // this should yoink the stuff from the sql
 $posts = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-
-
 ?>

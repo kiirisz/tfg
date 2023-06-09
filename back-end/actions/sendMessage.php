@@ -13,6 +13,7 @@ if (isset($_POST['userRecipient']) && isset($_POST['subject']) && isset($_POST['
     VALUES (:userRecipient, :userSender, :subject, :message, :seen, :date, :randomId)";
 
     $SQLsequence = $conexion->prepare($query);
+    
     $SQLsequence->bindParam(':userRecipient', $_POST['userRecipient']);
     $SQLsequence->bindParam(':userSender', $email);
     $SQLsequence->bindParam(':subject', $_POST['subject']);

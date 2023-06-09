@@ -4,7 +4,6 @@ include("../../back-end/actions/retrieve.php");
 ?>
 
 <main class="home h-full bg-slate-200 w-full flex flex-col items-center">
-
     <!-- heading -->
     <div class="bg-pink-700 text-white w-full flex">
         <img src="https://pbs.twimg.com/profile_images/1530187776787873793/Hg123lf1_400x400.jpg" alt=""

@@ -3,7 +3,9 @@ include("../template/header.php");
 include("../../back-end/db/db.php");
 include("../../back-end/actions/search.php");
 include("../../back-end/actions/retrieveforMessages.php");
+include("../../back-end/actions/sendMessage.php");
 ?>
+
 <script type="text/javascript" src="<?php echo $url;?>/front-end/js/dselect.js"></script>
 <main class="home h-full bg-slate-200 w-full flex flex-col items-center">
     <article class="header">
