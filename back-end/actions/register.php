@@ -23,8 +23,6 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $stmt->bindParam(':phoneNumber', $_POST['phone']);
     $stmt->bindParam(':profilePic', $_POST['profilePic']);
 
-    $stmt->execute();
-
     if ($stmt->execute()) {
         $message = 'Successfully created new user';
         header("Location: ../../front-end/pages/login.php");

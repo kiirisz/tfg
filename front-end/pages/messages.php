@@ -2,17 +2,7 @@
 include("../template/header.php");
 include("../../back-end/db/db.php");
 include("../../back-end/actions/search.php");
-include("../../back-end/actions/sendMessage.php");
-?>
-
-<?php
-$email = $_SESSION['email'];
-$SQLsequence = $conexion->prepare("SELECT * FROM messages where userRecipient = '$email'");
-$SQLsequence->execute();
-$userList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
-$GetAllUsers = $conexion->prepare("SELECT * FROM users");
-$GetAllUsers->execute();
-$allUsersList = $GetAllUsers->fetchAll(PDO::FETCH_ASSOC);
+include("../../back-end/actions/retrieveforMessages.php");
 ?>
 <script type="text/javascript" src="<?php echo $url;?>/front-end/js/dselect.js"></script>
 <main class="home h-full bg-slate-200 w-full flex flex-col items-center">
@@ -33,27 +23,31 @@ $allUsersList = $GetAllUsers->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <article class="main">
-    <?php foreach($userList as $users){ ?>
-    <?php if ($users['seen'] == 0) {?>
-        <section class="not-seen">
-    <?php }else if ($users['seen'] == 1) {?>
-        <section class="seen">
-    <?php } ?>
-            <div class="left">
-                <div class='user_image'>
-                    <img src="../../img/basic_logo_dark.svg" alt="user image">
+        <?php foreach($userList as $users){ 
+        if ($users['seen'] == 0) {?>
+            <section class="not-seen">
+        <?php }else if ($users['seen'] == 1) {?>
+            <section class="seen">
+        <?php } ?>
+                <div class="left">
+                    <div class='user_image'>
+                        <img src="../../img/basic_logo_dark.svg" alt="user image">
+                    </div>
                 </div>
-            </div>
-            <div class="right">
-                <div class='userName_<?php echo $users['id'] ?>' id="userName"><?php echo $users['userSender']; ?></div>
-            <?php if ($users['seen'] == 0) {?>
-                <div id="NoShow" class='user_message_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
-                <button id="readButton_<?php echo $users['id'] ?>" class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
-            <?php }else if ($users['seen'] == 1) {?>
-                <div id="Show" class='userMessage_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
-            <?php } ?>
-            </div>
-        </section>
+                <div class="middle">
+                    <div class='userName_<?php echo $users['id'] ?>' id="userName"><?php echo $users['userSender']; ?></div>
+                    <div class='subject_<?php echo $users['id'] ?>' id="subject"><?php echo $users['subject']; ?></div>
+                    <?php if ($users['seen'] == 0) {?>
+                    <div id="NoShow" class='user_message_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
+                    <button id="readButton_<?php echo $users['id'] ?>" class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
+                <?php }else if ($users['seen'] == 1) {?>
+                    <div id="Show" class='userMessage_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
+                <?php } ?>
+                </div>
+                <div class="right">
+                    <button class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3"><i class='bx bxs-trash-alt icon'></i></button>
+                </div>
+            </section>
         <?php } ?>
     </article>
     <article>
@@ -67,7 +61,7 @@ $allUsersList = $GetAllUsers->fetchAll(PDO::FETCH_ASSOC);
                     <form action="../../back-end/actions/sendMessage.php" method="POST">
                         <div class="modal-body">
                             <div class="row">
-                                <select name="select_box" class="form-select" id="select_box" name="email-recipient" id="email-recipient">
+                                <select name="userRecipient" class="form-select" id="userRecipient" name="email-recipient" id="email-recipient">
                                     <option value="">Select the recipient</option>
                                     <?php 
                                     foreach($allUsersList as $allUsers){
@@ -77,17 +71,15 @@ $allUsersList = $GetAllUsers->fetchAll(PDO::FETCH_ASSOC);
                                 </select>
                             </div>
                             <div class="row">
-                                <input type="text" name="email-subject" id="email-subject" class="form-control" placeholder="Subject" aria-label="Subject">
+                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" aria-label="Subject">
                             </div>
                             <div class="row">
-                                <textarea class="form-control" name="email-message" id="email-message" placeholder="Message" aria-label="Message"></textarea>
+                                <textarea class="form-control" name="message" id="message" placeholder="Message" aria-label="Message"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <input type="submit" value="">
-                                <button type="button" class="btn btn-primary"><i class='bx bxs-send icon'></i></button>
-                            </input>
+                            <input type="submit" value="Enviar">
                         </div>
                     </form>
                 </div>
@@ -101,10 +93,10 @@ $allUsersList = $GetAllUsers->fetchAll(PDO::FETCH_ASSOC);
         search: true
     });
 </script>
-<script src="../js/messages.js">
+<script src="../js/messages.js" id="script">
     <?php
         include("../../back-end/actions/updateSeen.php");
-        ?>
+    ?>
 </script>
 
 <?php

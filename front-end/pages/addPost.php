@@ -3,7 +3,7 @@ include("../template/header.php");
 include("../../back-end/actions/add.php");
 ?>
 
-<main class="h-screen w-full flex flex-col items-center bg-gradient-to-br from-red-500 to-yellow-500">
+<main class="home h-screen w-full flex flex-col items-center bg-gradient-to-br from-red-500 to-yellow-500">
 
     <div class="text-slate-800 bg-slate-200 flex flex-col items-center text-center my-auto px-5 rounded-md p-5">
         <!-- i am ready and willing to delete php from existence if this doesn't work -->

@@ -43,12 +43,17 @@ article.main section.seen{
 }
 article.main section .left{
     float: left;
-    width: 8%;
+    width: 10%;
     overflow: hidden;
+    clear: left;
+}
+article.main section .middle{
+    float: left;
+    width: 80%;
 }
 article.main section .right{
     float: right;
-    width: 90%;
+    width: 10%;
 }
 article.main section .user_image img{
     height: 100%;
