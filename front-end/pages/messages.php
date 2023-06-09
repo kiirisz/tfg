@@ -47,7 +47,10 @@ include("../../back-end/actions/sendMessage.php");
                 <?php } ?>
                 </div>
                 <div class="right">
-                    <button class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3"><i class='bx bxs-trash-alt icon'></i></button>
+                    <form action="../../back-end/actions/removeMessage.php" method="get">
+                        <!--TODO: change value so it shows "Remove" but has the message id-->
+                        <input type="submit" value="<?php echo $users['id'] ?>" class="removeButton_<?php echo $users['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                    </form>
                 </div>
             </section>
         <?php } ?>
