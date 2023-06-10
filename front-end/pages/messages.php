@@ -49,7 +49,8 @@ include("../../back-end/actions/sendMessage.php");
                 <div class="right">
                     <form action="../../back-end/actions/removeMessage.php" method="get">
                         <!--TODO: change value so it shows "Remove" but has the message id-->
-                        <input type="submit" value="<?php echo $users['id'] ?>" class="removeButton_<?php echo $users['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                        <input type="hidden" value="<?php echo $users['id'] ?>" name="remove_id" id="remove_id">
+                        <input type="submit" value="Remove" class="removeButton_<?php echo $users['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
                     </form>
                 </div>
             </section>
