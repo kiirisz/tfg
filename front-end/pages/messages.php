@@ -14,9 +14,6 @@ include("../../back-end/actions/sendMessage.php");
                 <input type="text" id="search" placeholder="Search here" />
             </header>
         </section>
-        <div>
-            <div id="display"></div>
-        </div>
     </article>
     <div class="top-section">
         <div>
@@ -25,36 +22,60 @@ include("../../back-end/actions/sendMessage.php");
         </div>
     </div>
     <article class="main">
-        <?php foreach($userList as $users){ 
-        if ($users['seen'] == 0) {?>
-            <section class="not-seen">
-        <?php }else if ($users['seen'] == 1) {?>
-            <section class="seen">
-        <?php } ?>
-                <div class="left">
-                    <div class='user_image'>
-                        <img src="../../img/basic_logo_dark.svg" alt="user image">
+        <div class="messages-container-not-seen">
+        <h2 class="text">Not seen</h2>
+        <?php foreach($userListNotSeen as $usersNotSeen){ ?>
+            <div class="messages-container">
+                <section class="not-seen">
+                    <div class="left">
+                        <div class='user_image'>
+                            <img src="../../img/basic_logo_dark.svg" alt="user image">
+                        </div>
+                        <div class='userName_<?php echo $usersNotSeen['id'] ?>' id="userName"><?php echo $usersNotSeen['userSender']; ?></div>
                     </div>
-                </div>
-                <div class="middle">
-                    <div class='userName_<?php echo $users['id'] ?>' id="userName"><?php echo $users['userSender']; ?></div>
-                    <div class='subject_<?php echo $users['id'] ?>' id="subject"><?php echo $users['subject']; ?></div>
-                    <?php if ($users['seen'] == 0) {?>
-                    <div id="NoShow" class='user_message_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
-                    <button id="readButton_<?php echo $users['id'] ?>" class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">Read message</button>
-                <?php }else if ($users['seen'] == 1) {?>
-                    <div id="Show" class='userMessage_<?php echo $users['id'] ?>'><?php echo $users['message']; ?></div>
-                <?php } ?>
-                </div>
-                <div class="right">
-                    <form action="../../back-end/actions/removeMessage.php" method="get">
-                        <!--TODO: change value so it shows "Remove" but has the message id-->
-                        <input type="hidden" value="<?php echo $users['id'] ?>" name="remove_id" id="remove_id">
-                        <input type="submit" value="Remove" class="removeButton_<?php echo $users['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
-                    </form>
-                </div>
-            </section>
+                    <div class="middle">
+                        <div class='subject_<?php echo $usersNotSeen['id'] ?>' id="subject"><?php echo $usersNotSeen['subject']; ?></div>
+                        <div id="NoShow" class='user_message_<?php echo $usersNotSeen['id'] ?>'><?php echo $usersNotSeen['message']; ?></div>
+                        <form action="../../back-end/actions/removeMessage.php" method="get">
+                            <input type="hidden" value="<?php echo $usersNotSeen['id'] ?>" name="remove_id" id="remove_id">
+                            <input type="submit" value="Read message" id="readButton_<?php echo $usersNotSeen['id'] ?>" class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                        </form>
+                    </div>
+                    <div class="right">
+                        <form action="../../back-end/actions/removeMessage.php" method="get">
+                            <input type="hidden" value="<?php echo $usersNotSeen['id'] ?>" name="remove_id" id="remove_id">
+                            <input type="submit" value="Remove" class="removeButton_<?php echo $usersNotSeen['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                        </form>
+                    </div>
+                </section>
+            </div>
         <?php } ?>
+        </div>
+        <div class="messages-container-seen">
+        <h2 class="text">Seen</h2>
+        <?php foreach($userListSeen as $usersSeen){ ?>
+            <div class="messages-container">
+                <section class="text seen">
+                    <div class="left">
+                        <div class='user_image'>
+                            <img src="../../img/basic_logo_dark.svg" alt="user image">
+                        </div>
+                        <div class='userName_<?php echo $usersSeen['id'] ?>' id="userName"><?php echo $usersSeen['userSender']; ?></div>
+                    </div>
+                    <div class="middle">
+                        <div class='subject_<?php echo $usersSeen['id'] ?>' id="subject"><?php echo $usersSeen['subject']; ?></div>
+                        <div id="Show" class='userMessage_<?php echo $usersSeen['id'] ?>'><?php echo $usersSeen['message']; ?></div>
+                    </div>
+                    <div class="right">
+                        <form action="../../back-end/actions/removeMessage.php" method="get">
+                            <input type="hidden" value="<?php echo $usersSeen['id'] ?>" name="remove_id" id="remove_id">
+                            <input type="submit" value="Remove" class="removeButton_<?php echo $usersSeen['id'] ?> bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                        </form>
+                    </div>
+                </section>
+            </div>
+        <?php } ?>
+        </div>
     </article>
     <article>
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

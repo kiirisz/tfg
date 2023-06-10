@@ -6,7 +6,7 @@ include("head.php");
 <body class="font-dmono ">
     <main class="flex h-screen">
         <!-- this is the heading where the logo will be -->
-        <header class="font-bold text-2xl bg-slate-800 text-white vertical-text h-full p-5"></header>
+        <header class="navbar-background font-bold text-2xl bg-800 text-white vertical-text h-full p-5"></header>
         <!-- this is the menu -->
         <nav class="sidebar close">
             <header>
@@ -69,6 +69,9 @@ include("head.php");
                             <span class="switch"></span>
                         </div>
                     </li>
+                </div>
+                <div>
+                    <p class="text nav-text copyright">©2023 <span class="page-name">Kuenty</span> <br>All Rights Reserved</p> 
                 </div>
             </div>
         </nav>

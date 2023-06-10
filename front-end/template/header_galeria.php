@@ -11,6 +11,8 @@
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/header.css" />
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/footer.css" />
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/mainCss.css">
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/messages.css">
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/grid-gallery.css" />
@@ -24,7 +26,7 @@
 <body class="font-dmono ">
     <main class="flex h-screen">
         <!-- this is the heading where the logo will be -->
-        <header class="font-bold text-2xl bg-slate-800 text-white vertical-text h-full p-5"></header>
+        <header class="navbar-background font-bold text-2xl bg-800 text-white vertical-text h-full p-5"></header>
         <!-- this is the menu -->
         <nav class="sidebar close">
             <header>
@@ -87,6 +89,9 @@
                             <span class="switch"></span>
                         </div>
                     </li>
+                </div>
+                <div>
+                    <p class="text nav-text copyright">©2023 <span class="page-name">Kuenty</span> <br>All Rights Reserved</p> 
                 </div>
             </div>
         </nav>

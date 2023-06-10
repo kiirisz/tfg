@@ -11,6 +11,8 @@
     <!-- ooo the world wide web is out there oooo -->
     <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/header.css" />
+    <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/footer.css" />
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/output.css">
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/dist/mainCss.css">
     <link rel="stylesheet" href="<?php echo $url;?>/front-end/css/messages.css">

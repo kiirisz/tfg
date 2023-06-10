@@ -101,5 +101,3 @@ $postsList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
       <?php } ?>
     </div>
   </main>
-
-<?php include("../template/footer.php"); ?>

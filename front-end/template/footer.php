@@ -1,8 +1,5 @@
                 <footer class="bg-gray-800 text-white p-5 text-center w-full">
-                    A webpage by
-                    <a href="#" id="kiiri">Ramiro Angel</a>,
-                    <a href="#" id="albrt">Alberto Lagar</a> and
-                    <a href="#" id="ilias">Ilias Akri</a>
+                    <p>©2023 <span class="page-name">Kuenty</span>, All Rights Reserved</p>    
                 </footer>
             </main>
         </main>
