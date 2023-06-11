@@ -2,3 +2,68 @@
     background-color: var(--primary-color-reverse);
     height: 100vh;
 }
+/*
+#sun-icon {
+    color: var(--sidebar-color);
+    transition: var(--tran-03);
+    position: absolute;
+    height: 6px;
+    width: 15px;
+    border-radius: 50%;
+    top: 30%;
+    left: 4px;
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+}
+#moon-icon{
+    color: var(--sidebar-color);
+    transition: var(--tran-03);
+    position: absolute;
+    height: 5px;
+    width: 15px;
+    border-radius: 50%;
+    top: 25%;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+}
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 19px;
+    width: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+body.dark .switch::before {
+    left: 26px;
+}
+#sun-icon {
+    color: #72757b;
+    transition: var(--tran-03);
+    position: absolute;
+    height: 6px;
+    width: 15px;
+    border-radius: 50%;
+    top: 32%;
+    left: 7px;
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+}
+#moon-icon {
+    color: #6a07ff;
+    transition: var(--tran-03);
+    position: absolute;
+    height: 5px;
+    width: 15px;
+    border-radius: 50%;
+    top: 26%;
+    left: 29px;
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+}
+*/

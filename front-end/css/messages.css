@@ -125,8 +125,13 @@ div[class*="userMessage"]{
     max-height: 70px;
 }
 
+input#search {
+    border-radius: 0 0 6px 6px;
+    height: 50px;
+}
+
 @media only screen and (max-width: 1560px) {
     .messages-container-seen{
         margin-top: 10px;
     }
-  }
+}

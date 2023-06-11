@@ -14,7 +14,8 @@
     --primary-color: #eb0000;
     --primary-color-reverse: #1e293b;
     --primary-color-light: #F6F5FF;
-    --toggle-color: #eb0000;
+    --toggle-arrow: #eb0000;
+    --toggle-color: #1e293b;
     --text-color: #1e293b;
 
     /* ====== Transition ====== */
@@ -41,6 +42,7 @@ body.dark{
     --primary-color: #3a3b3c;
     --primary-color-reverse: #ff0000;
     --primary-color-light: #3a3b3c;
+    --toggle-arrow: #ccc;
     --toggle-color: #ccc;
     --text-color: #ccc;
 }
@@ -212,7 +214,7 @@ header .image-text .profession{
     height: 25px;
     width: 25px;
     background-color: var(--sidebar-color);
-    color: var(--toggle-color);
+    color: var(--toggle-arrow);
     border-radius: 50%;
     display: flex;
     align-items: center;
