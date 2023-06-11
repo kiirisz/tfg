@@ -130,6 +130,14 @@ input#search {
     height: 50px;
 }
 
+.readButton {
+    background-color: #1E293B;
+    border-bottom: 2px solid #EF4444;
+}
+.sendMesage {
+    background-color: var(--primary-color-light);
+    border-bottom: 2px solid var(--primary-color-reverse);
+}
 @media only screen and (max-width: 1560px) {
     .messages-container-seen{
         margin-top: 10px;

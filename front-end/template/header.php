@@ -6,7 +6,7 @@ include("head.php");
 <body class="font-dmono ">
     <main class="flex h-screen">
         <!-- this is the heading where the logo will be -->
-        <header class="navbar-background font-bold text-2xl bg-800 text-white vertical-text h-full p-5"></header>
+        <header class="navbar-background font-bold text-2xl bg-800 text-white vertical-text h-full p-5 close"></header>
         <!-- this is the menu -->
         <nav class="sidebar close">
             <header>
@@ -21,9 +21,18 @@ include("head.php");
             </header>
             <div class="menu-bar">
                 <div class="menu">
+                    <div>
+                        <div id="display" class="text"></div>
+                    </div>
                     <li class="search-box">
                         <i class='bx bx-search icon'></i>
-                        <input type="text" placeholder="Search...">
+                        <div>
+                            <section>
+                                <header class="text">
+                                    <input type="text" id="search" placeholder="Search.." />
+                                </header>
+                            </section>
+                        </div>
                     </li>
                     <ul class="menu-links">
                         <li class="navbar-link">
@@ -66,7 +75,10 @@ include("head.php");
                         </div>  
                         <span class="mode-text text">Dark mode</span>
                         <div class="toggle-switch">
-                            <span class="switch"></span>
+                            <span class="switch">
+                                <!--<i class='bx bxs-sun bx-xs' id="sun-icon"></i>
+                                <i class='bx bxs-moon bx-xs' id="moon-icon"></i>-->
+                            </span>
                         </div>
                     </li>
                 </div>

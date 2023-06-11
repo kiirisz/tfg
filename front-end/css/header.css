@@ -1,69 +1,58 @@
-.navbar-background{
-    background-color: var(--primary-color-reverse);
+/*Output part*/
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+button, [type='button'], [type='reset'], [type='submit'] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+/*#3772FF*/
+.navbar-background {
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 257px;
+    padding: 10px 14px;
+    transition: var(--tran-05);
+    background-color: var(--primary-color-reverse);
+    z-index: 50;
 }
-/*
-#sun-icon {
-    color: var(--sidebar-color);
+.navbar-background.close {
+    width: 88px;
+}
+#display{
+    max-height: 110px;
+    overflow: auto;
+}
+#display li {
+    margin-top: 5px;
+}
+#display li form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
     transition: var(--tran-03);
-    position: absolute;
-    height: 6px;
-    width: 15px;
-    border-radius: 50%;
-    top: 30%;
-    left: 4px;
-    transform: translateY(-50%);
-    transition: var(--tran-04);
 }
-#moon-icon{
-    color: var(--sidebar-color);
-    transition: var(--tran-03);
-    position: absolute;
-    height: 5px;
-    width: 15px;
-    border-radius: 50%;
-    top: 25%;
-    left: 20px;
-    transform: translateY(-50%);
-    transition: var(--tran-04);
+#display form {
+    background-color: var(--primary-color-light);
+    justify-content: center;
+    font-weight: bold;
 }
-.switch::before {
-    content: '';
-    position: absolute;
-    height: 19px;
-    width: 20px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    background-color: var(--sidebar-color);
-    transition: var(--tran-04);
-}
-body.dark .switch::before {
-    left: 26px;
-}
-#sun-icon {
-    color: #72757b;
-    transition: var(--tran-03);
-    position: absolute;
-    height: 6px;
-    width: 15px;
-    border-radius: 50%;
-    top: 32%;
-    left: 7px;
-    transform: translateY(-50%);
-    transition: var(--tran-04);
-}
-#moon-icon {
-    color: #6a07ff;
-    transition: var(--tran-03);
-    position: absolute;
-    height: 5px;
-    width: 15px;
-    border-radius: 50%;
-    top: 26%;
-    left: 29px;
-    transform: translateY(-50%);
-    transition: var(--tran-04);
-}
-*/

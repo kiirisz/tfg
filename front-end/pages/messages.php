@@ -14,10 +14,13 @@ include("../../back-end/actions/sendMessage.php");
                 <input type="text" id="search" placeholder="Search here" />
             </header>
         </section>
+        <div>
+            <div id="display"></div>
+        </div>
     </article>
     <div class="top-section">
         <div>
-            <button class="bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Send message</button>
+            <button class="sendMesage text bg-500 hover:bg-red-900 transition ease-in-out p-2 font-bold rounded-md m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Send message</button>
             <h3 class="text">Your messages</h3>
         </div>
     </div>
@@ -38,7 +41,7 @@ include("../../back-end/actions/sendMessage.php");
                         <div id="NoShow" class='user_message_<?php echo $usersNotSeen['id'] ?>'><?php echo $usersNotSeen['message']; ?></div>
                         <form action="../../back-end/actions/removeMessage.php" method="get">
                             <input type="hidden" value="<?php echo $usersNotSeen['id'] ?>" name="remove_id" id="remove_id">
-                            <input type="submit" value="Read message" id="readButton_<?php echo $usersNotSeen['id'] ?>" class="readButton bg-red-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
+                            <input type="submit" value="Read message" id="readButton_<?php echo $usersNotSeen['id'] ?>" class="readButton bg-500 hover:bg-red-900 transition ease-in-out text-white p-2 font-bold rounded-md m-3">
                         </form>
                     </div>
                     <div class="right">
