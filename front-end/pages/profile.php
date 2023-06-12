@@ -19,7 +19,7 @@ include("../../back-end/actions/retrieve.php");
 
 
     <!-- body of the profile -->
-    <main class="w-full grid grid-cols-2 md:grid-cols-4 gap-2 profilegrid p-2">
+    <main class="w-full grid grid-cols-2 md:grid-cols-4 gap-3 profilegrid p-3">
         <?php
         foreach ($posts as $post) {
             // this posts the image into the src of the image element, with the caption as its alt
