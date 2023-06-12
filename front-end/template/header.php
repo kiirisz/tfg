@@ -13,7 +13,7 @@ include("head.php");
                 <div class="image-text">
                     <span class="image">
                         <a href="<?php echo $url;?>/front-end/pages/galeria.php">
-                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
+                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="Kuenty Logo">
                         </a>
                     </span>
                 </div>

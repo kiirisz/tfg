@@ -5,12 +5,13 @@ include("../../back-end/actions/retrieve.php");
 
 <main class="home h-full bg-slate-200 w-full flex flex-col items-center">
     <!-- heading -->
-    <div class="bg-pink-700 text-white w-full flex">
-        <img src="https://pbs.twimg.com/profile_images/1530187776787873793/Hg123lf1_400x400.jpg" alt=""
-            class="m-5 h-40">
+    <div class="bg-gradient-to-r from-red-500 to-yellow-500 text-white w-full flex">
+        <img 
+        src="../../back-end/db/uploads/profile/<?php echo($_SESSION['username'])?>.jpeg" 
+        alt="<?php echo($_SESSION['username'])?>'s Profile Picture"
+            class="m-5 h-40 rounded">
         <aside class="p-5">
-            <h1 class="text-4xl font-bold">kiiri aka Ramiro Angel</h1>
-            <p>@kiiri</p> <br><br>
+            <h1 class="text-4xl font-bold"><?php echo($_SESSION['username'])?></h1> <br><br>
 
             <p>description</p>
         </aside>
