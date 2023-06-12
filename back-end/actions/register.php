@@ -4,13 +4,14 @@
 
 // calling the database handler
 include("../../back-end/db/db.php");
+$url="http://".$_SERVER['HTTP_HOST']."/tfg";
 
 $date = date('Y-m-d', time());
 
 // añadir aqui los campos para completar la tabla users de instagram
 if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])) {
-    $query = "INSERT INTO users (email, password, userName, birthDate, creationDate, phoneNumber, profilePic) 
-    VALUES (:email, :password, :userName, :birthDate, :creationDate, :phoneNumber, :profilePic)";
+    $query = "INSERT INTO users (email, password, userName, birthDate, creationDate, phoneNumber, profilePic, description) 
+    VALUES (:email, :password, :userName, :birthDate, :creationDate, :phoneNumber, :profilePic, :description)";
 
 
     $stmt = $conexion->prepare($query);
@@ -24,10 +25,11 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $stmt->bindParam(':birthDate', $_POST['date']);
     $stmt->bindParam(':creationDate', $date);
     $stmt->bindParam(':phoneNumber', $_POST['phone']);
-    $stmt->bindParam(':profilePic', $imageName);
+    $stmt->bindParam(':profilePic', $futureImageName);
+    $stmt->bindParam(':description', $_POST['description']);
 
     if (isset($_FILES['profilePic'])) {
-        $targetDir = '../db/uploads/profile/'; // upload directory
+        $targetDir = $url.'/back-end/db/uploads/profile/'; // upload directory
         $targetFile = $targetDir . basename($_FILES['profilePic']['name']); // this points to the original file in the disk
         $uploadOk = 1;
         $imginputType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // this stores the extension

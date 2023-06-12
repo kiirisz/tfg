@@ -19,7 +19,22 @@ button, input, optgroup, select, textarea {
     margin: 0;
     padding: 0;
 }
-/*#3772FF*/
+::-webkit-scrollbar-track {
+    background: #1E293B;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #EF4444;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a33030;
+}
+/**/
 .navbar-background {
     height: 100vh;
     position: fixed;

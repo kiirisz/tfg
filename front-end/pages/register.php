@@ -27,6 +27,10 @@ include("../template/head.php");
                     <input type="email" name="email" id="email" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
+                    <label for="description" class="text-2xl">Description</label><br>
+                    <input type="text" name="description" id="description"
+                        class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
+
                     <label for="date" class="text-2xl">Date of Birth</label><br>
                     <input type="date" name="date" id="date" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
