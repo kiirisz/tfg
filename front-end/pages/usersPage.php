@@ -23,7 +23,7 @@ include("../../back-end/actions/usersPageData.php");
     <?php
     foreach ($postList as $post) {
         // this posts the image into the src of the image element, with the caption as its alt
-        echo '<img src=" ../../back-end/db/uploads/' . $post['images'] . '" alt=" ' . $post['caption'] . ' " srcset="" class="">';
+        echo '<img src=" ../../back-end/db/uploads/posts' . $post['images'] . '" alt=" ' . $post['caption'] . ' " srcset="" class="">';
     }
     ?>
 </main>

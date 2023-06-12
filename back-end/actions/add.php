@@ -6,7 +6,7 @@ $timestamp = time(); // Get the current timestamp
 // this receives the image, makes all pertinent checks, renames it and throws it into the folder
 if (isset($_FILES['imginput'])) {
 
-    $targetDir = '../db/uploads/'; // upload directory
+    $targetDir = '../db/uploads/posts'; // upload directory
     $targetFile = $targetDir . basename($_FILES['imginput']['name']); // the directory+the file
     $uploadOk = 1;
     $imginputType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // this stores the extension
