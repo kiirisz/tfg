@@ -8,7 +8,6 @@ module.exports = {
     "*.php"
   ],
     theme: {
-    extend: {},
   },
   plugins: [],
 }

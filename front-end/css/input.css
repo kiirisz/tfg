@@ -64,3 +64,8 @@ footer>a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(159, 236, 72);
 }
+
+.profilegrid{
+  grid-auto-rows: 200px 200px !important;
+  grid-auto-flow: dense;
+}
