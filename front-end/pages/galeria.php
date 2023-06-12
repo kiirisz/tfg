@@ -14,7 +14,7 @@ $postsList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach($postsList as $posts){ ?>
         <div 
           class="grid-item"
-          style="background-image: url('<?php echo $url;?>/back-end/db/uploads/<?php echo $posts['images']; ?>')"
+          style="background-image: url('<?php echo $url;?>/back-end/db/uploads/posts/<?php echo $posts['images']; ?>')"
         ></div>
         <!--
         <div
