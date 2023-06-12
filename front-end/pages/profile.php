@@ -7,7 +7,8 @@ include("../../back-end/actions/retrieve.php");
     <!-- heading -->
     <div class="bg-gradient-to-r from-red-500 to-yellow-500 text-white w-full flex">
         <img src="../../back-end/db/uploads/profile/<?php echo ($pfp) ?>"
-            alt="<?php echo ($_SESSION['username']) ?>'s Profile Picture" class="m-5 h-40 rounded">
+            alt="<?php echo ($_SESSION['username']) ?>'s Profile Picture" 
+            class="m-5 h-40 w-40 object-cover rounded">
         <aside class="p-5">
             <h1 class="text-4xl font-bold">
                 <?php echo ($_SESSION['username']) ?>
@@ -29,7 +30,7 @@ include("../../back-end/actions/retrieve.php");
                     <a href="#" class=" flex">
                         <img src="../../back-end/db/uploads/profile/'.$pfp.'"
                         alt="'.($_SESSION['username']).'\'s Profile Picture" 
-                        class="h-6 rounded m-1">
+                        class="h-6 w-6 object-cover rounded m-1">
                         <div class=" m-1">'.($_SESSION['username']).'</div>
                     </a>
                     <p class="text-white">'. $post['caption'].
