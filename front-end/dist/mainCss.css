@@ -17,6 +17,7 @@
     --toggle-arrow: #eb0000;
     --toggle-color: #1e293b;
     --text-color: #1e293b;
+    --close-button: #ffffff;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -45,6 +46,7 @@ body.dark{
     --toggle-arrow: #ccc;
     --toggle-color: #ccc;
     --text-color: #ccc;
+    --close-button: #ccc;
 }
 
 /* ===== Sidebar ===== */

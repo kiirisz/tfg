@@ -22,17 +22,17 @@ button, input, optgroup, select, textarea {
 ::-webkit-scrollbar-track {
     background: #1E293B;
 }
-
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
     background: #EF4444;
 }
-
 /* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
     background: #a33030;
+}
+b{
+    opacity: 0;
+    display: none;
 }
 /**/
 .navbar-background {
