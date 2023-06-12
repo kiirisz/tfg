@@ -14,8 +14,12 @@ $getposts -> execute();
 $getpfp = $conexion->prepare("SELECT profilePic FROM users WHERE username='$user'");
 $getpfp -> execute();
 
+// get the description
+$getdesc = $conexion->prepare("SELECT description FROM users WHERE username='$user'");
+$getdesc -> execute();
 
 // this should yoink the stuff from the sql
 $posts = $getposts->fetchAll(PDO::FETCH_ASSOC);
 $pfp = $getpfp -> fetchColumn();
+$desc = $getdesc -> fetchColumn();
 ?>

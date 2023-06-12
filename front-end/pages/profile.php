@@ -14,7 +14,9 @@ include("../../back-end/actions/retrieve.php");
                 <?php echo ($_SESSION['username']) ?>
             </h1> <br><br>
 
-            <p>description</p>
+            <p>
+                <?php echo $desc?>
+            </p>
         </aside>
     </div>
 
