@@ -25,7 +25,7 @@ include("../../back-end/actions/retrieve.php");
         foreach ($posts as $post) {
             // this posts the image into the src of the image element, with the caption as its alt
             echo '
-            <div class="rounded overflow-hidden bg-black " style="background-image: url(../../back-end/db/uploads/posts' . $post['images'] . '); background-size: cover; background-position: center;">
+            <div class="rounded overflow-hidden bg-black " style="background-image: url(../../back-end/db/uploads/posts/' . $post['images'] . '); background-size: cover; background-position: center;">
                 <div class="w-full h-full opacity-0 hover:opacity-80 bg-black transition-opacity duration-100 p-2">
                     <a href="#" class=" flex">
                         <img src="../../back-end/db/uploads/profile/'.$pfp.'"
