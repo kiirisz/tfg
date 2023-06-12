@@ -1,0 +1,58 @@
+/*Output part*/
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+button, [type='button'], [type='reset'], [type='submit'] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+/*#3772FF*/
+.navbar-background {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 257px;
+    padding: 10px 14px;
+    transition: var(--tran-05);
+    background-color: var(--primary-color-reverse);
+    z-index: 50;
+}
+.navbar-background.close {
+    width: 88px;
+}
+#display{
+    max-height: 110px;
+    overflow: auto;
+}
+#display li {
+    margin-top: 5px;
+}
+#display li form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+#display form {
+    background-color: var(--primary-color-light);
+    justify-content: center;
+    font-weight: bold;
+}

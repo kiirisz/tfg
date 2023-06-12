@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123.13 117.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e40134;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-5, .cls-6 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-2, .cls-4, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-8 {
+        fill: #c8006e;
+      }
+
+      .cls-9 {
+        fill: #aa1435;
+      }
+
+      .cls-10 {
+        fill: #cdcccc;
+      }
+
+      .cls-11 {
+        fill: #9d111c;
+      }
+
+      .cls-3 {
+        fill: #e30613;
+      }
+
+      .cls-4 {
+        stroke-width: 5px;
+      }
+
+      .cls-4, .cls-7 {
+        stroke: #cdcccc;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 2px;
+      }
+
+      .cls-12 {
+        fill: #c11011;
+      }
+
+      .cls-13 {
+        fill: #a41e1b;
+      }
+
+      .cls-14 {
+        fill: #8f0f28;
+      }
+
+      .cls-15 {
+        fill: #bd1111;
+      }
+
+      .cls-16 {
+        fill: #740e00;
+      }
+
+      .cls-17 {
+        fill: #be1d2f;
+      }
+
+      .cls-18 {
+        fill: #cd171d;
+      }
+
+      .cls-19 {
+        fill: #1d1d1b;
+      }
+
+      .cls-7 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_3" data-name="Capa 3">
+    <line class="cls-4" x1="1.5" y1="115.43" x2="121.63" y2="115.46"/>
+    <polygon class="cls-4" points="61.37 2.68 85.79 12.15 61.38 36.41 37.15 12.03 61.37 2.68"/>
+    <ellipse class="cls-10" cx="120.51" cy="15.33" rx="2.65" ry="2.3" transform="translate(1.51 39.76) rotate(-18.85)"/>
+    <ellipse class="cls-10" cx="2.71" cy="15.51" rx="2.29" ry="2.74" transform="translate(-12.99 14.27) rotate(-75.54)"/>
+    <line class="cls-7" x1="60.65" y1="36.61" x2="2.79" y2="14.7"/>
+    <line class="cls-7" x1="61.84" y1="36.41" x2="120.27" y2="14.58"/>
+    <line class="cls-7" x1="121.63" y1="60.07" x2="121.63" y2="15.2"/>
+    <line class="cls-7" x1="1.5" y1="59.68" x2="1.5" y2="15.32"/>
+    <g>
+      <path class="cls-7" d="M1.5,59.68c-.09,30.72,26.65,55.67,59.79,55.77"/>
+      <path class="cls-7" d="M121.63,60.07c-.09,30.71-27.02,55.48-60.19,55.38"/>
+    </g>
+    <polygon class="cls-9" points="59.94 37.85 36.29 47.05 6.59 17.16 59.94 37.85"/>
+    <polygon class="cls-8" points="61.27 38.44 85.69 47.9 61.28 72.16 37.05 47.78 61.27 38.44"/>
+    <polygon class="cls-1" points="88.31 47.91 119.57 16.73 119.73 60.12 88.31 47.91"/>
+    <path class="cls-16" d="M60.36,114.17l.1-40.08-25.54-25.83L3.4,60.51s-1.03,48.48,56.95,53.65Z"/>
+    <line class="cls-3" x1="61.3" y1="37.91" x2="35.67" y2="47.82"/>
+    <polygon class="cls-5" points="61.36 2.68 85.78 12.15 61.37 36.41 37.14 12.03 61.36 2.68"/>
+    <polygon class="cls-18" points="116.89 16.92 86.51 47.21 62.47 37.92 116.89 16.92"/>
+    <polygon class="cls-17" points="34.32 47.81 3.75 59.68 3.79 17.14 34.32 47.81"/>
+    <path class="cls-15" d="M61.58,113.83l.1-39.8,26.09-25.44,32.29,12.41s.99,48.44-58.48,52.83Z"/>
+    <g>
+      <line class="cls-6" x1="61.22" y1="114.45" x2="61.28" y2="72.26"/>
+      <line class="cls-6" x1="2.54" y1="115.44" x2="120.29" y2="115.46"/>
+      <path class="cls-6" d="M2.79,60.54c-.09,29.54,26.13,53.53,58.64,53.63"/>
+      <line class="cls-6" x1="2.79" y1="15.2" x2="2.79" y2="61.21"/>
+      <line class="cls-6" x1="60.57" y1="74.32" x2="119.11" y2="16.15"/>
+      <line class="cls-6" x1="4.31" y1="16.26" x2="61.55" y2="73.86"/>
+      <line class="cls-2" x1="2.79" y1="15.2" x2="120.61" y2="60.93"/>
+      <line class="cls-2" x1="120.61" y1="14.98" x2="2.73" y2="60.55"/>
+      <path class="cls-6" d="M120.61,60.93c-.09,29.53-26.5,53.35-59.03,53.25"/>
+      <line class="cls-6" x1="120.61" y1="14.98" x2="120.61" y2="61"/>
+      <ellipse class="cls-19" cx="2.68" cy="15.32" rx=".64" ry=".9" transform="translate(-12.86 14.61) rotate(-77.5)"/>
+      <ellipse class="cls-19" cx="4.15" cy="16.49" rx=".55" ry=".81" transform="translate(-12.36 20.58) rotate(-89.82)"/>
+      <ellipse class="cls-19" cx="120.72" cy="15.09" rx=".9" ry=".64" transform="translate(-.47 25.72) rotate(-12.14)"/>
+      <ellipse class="cls-19" cx="119.39" cy="16.12" rx=".64" ry=".9" transform="translate(77.82 129.2) rotate(-77.5)"/>
+    </g>
+    <polygon class="cls-14" points="61.18 17.82 38.3 12.67 61.07 35.59 61.18 17.82"/>
+    <polygon class="cls-11" points="61.86 35.43 84.48 12.96 61.97 17.93 61.86 35.43"/>
+    <polygon class="cls-13" points="38.63 11.88 61.18 17.13 60.94 3.08 38.63 11.88"/>
+    <polygon class="cls-12" points="84.49 11.97 61.77 3.09 61.83 17.13 84.49 11.97"/>
+    <line class="cls-2" x1="61.36" y1="2.68" x2="61.58" y2="17.66"/>
+    <line class="cls-2" x1="61.37" y1="36.41" x2="61.58" y2="17.66"/>
+    <line class="cls-6" x1="37.14" y1="12.03" x2="61.58" y2="17.66"/>
+    <line class="cls-6" x1="85.78" y1="12.15" x2="61.58" y2="17.66"/>
+    <line class="cls-6" x1="61.47" y1="37.66" x2="120.87" y2="15.53"/>
+    <line class="cls-6" x1="60.65" y1="37.66" x2="2.79" y2="15.75"/>
+  </g>
+</svg>

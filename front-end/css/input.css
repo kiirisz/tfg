@@ -3,39 +3,43 @@
 @tailwind utilities;
 
 /* fonts */
-.font-dmono{
-    font-family: 'Inter', monospace;
+.font-dmono {
+  font-family: 'Inter', monospace;
 }
 
 /* things tailwind doesn't have for some reason */
-.vertical-text{
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 
 /* link treatment */
 
-#linktest > a{
-    font-weight: bold;
+#linktest>a {
+  font-weight: bold;
 }
 
-#linktest > a:hover{
-    color: black;
+#linktest>a:hover {
+  color: black;
 }
 
-footer > a{
-  text-decoration-line: none;
+a {
+  text-decoration-line: none !important;
 }
 
-footer > a:hover{
+footer>a {
+  color: yellow;
+}
+
+footer>a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
 
 /* individual items */
 
-#navbar > * {
-    padding: 1.25rem;
+#navbar>* {
+  padding: 1.25rem;
 }
 
 /* let's get funky!!! */
@@ -43,20 +47,25 @@ footer > a:hover{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgb(249 168 212);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(159, 236, 72);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(159, 236, 72);
-  }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(249 168 212);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(159, 236, 72);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(159, 236, 72);
+}
+
+.profilegrid{
+  grid-auto-rows: 200px 200px !important;
+  grid-auto-flow: dense;
+}

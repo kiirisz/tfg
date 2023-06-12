@@ -1,5 +1,6 @@
 const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
+      navbar = body.querySelector('.navbar-background'),
       toggle = body.querySelector(".toggle"),
       searchBtn = body.querySelector(".search-box"),
       modeSwitch = body.querySelector(".toggle-switch"),
@@ -8,10 +9,12 @@ const body = document.querySelector('body'),
 
 toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
+    navbar.classList.toggle("close");
 })
 
 searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
+    navbar.classList.remove("close");
 })
 
 modeSwitch.addEventListener("click" , () =>{

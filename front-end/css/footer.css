@@ -1,0 +1,11 @@
+.copyright{
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 0.8em !important;
+    transition: var(--tran-05);
+    background-color: var(--primary-color-light);
+}
+.page-name{
+    color: rgb(227, 6, 19);
+}
