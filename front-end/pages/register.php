@@ -1,5 +1,5 @@
 <?php
-include("../../back-end/actions/login.php");
+include("../../back-end/actions/register.php");
 
 include("../template/head.php");
 ?>
@@ -14,30 +14,30 @@ include("../template/head.php");
                     <h1>kuenty</h1>
                 </div>
 
-                <form action="../../back-end/actions/register.php" method="POST" class="my-auto">
+                <form action="../../back-end/actions/register.php" method="POST" enctype="multipart/form-data" class="my-auto">
                     <label for="username" class="text-2xl">Username</label><br>
-                    <input type="text" name="username" id="username"
+                    <input type="text" name="username" id="username" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="pass" class="text-2xl">Password</label><br>
-                    <input type="password" name="pass" id="pass"
+                    <input type="password" name="pass" id="pass" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="email" class="text-2xl">Email</label><br>
-                    <input type="email" name="email" id="email"
+                    <input type="email" name="email" id="email" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="date" class="text-2xl">Date of Birth</label><br>
-                    <input type="date" name="date" id="date"
+                    <input type="date" name="date" id="date" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="phone" class="text-2xl">Phone Number</label><br>
-                    <input type="text" name="phone" id="phone"
+                    <input type="text" name="phone" id="phone" required
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
 
-                    <label for="profilePic" class="text-2xl">Profile pic</label><br>
-                    <input type="file" name="profilePic" id="photo"
+                    <label for="profilePic" class="text-2xl">Profile Picture</label><br>
+                    <input type="file" name="profilePic" id="profilePic" required accept="image/png, image/jpeg"
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <input type="submit" value="Sign Up"
