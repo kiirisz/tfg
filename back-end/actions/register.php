@@ -13,26 +13,12 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $query = "INSERT INTO users (email, password, userName, birthDate, creationDate, phoneNumber, profilePic, description) 
     VALUES (:email, :password, :userName, :birthDate, :creationDate, :phoneNumber, :profilePic, :description)";
 
-
-    $stmt = $conexion->prepare($query);
-
-    $password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
-    $imageName = $_POST['username'] . '.' . $imginputType;
-
-    $stmt->bindParam(':email', $_POST['email']);
-    $stmt->bindParam(':password', $password);
-    $stmt->bindParam(':userName', $_POST['username']);
-    $stmt->bindParam(':birthDate', $_POST['date']);
-    $stmt->bindParam(':creationDate', $date);
-    $stmt->bindParam(':phoneNumber', $_POST['phone']);
-    $stmt->bindParam(':profilePic', $futureImageName);
-    $stmt->bindParam(':description', $_POST['description']);
-
     if (isset($_FILES['profilePic'])) {
-        $targetDir = $url.'/back-end/db/uploads/profile/'; // upload directory
+        $targetDir = '../../back-end/db/uploads/profile/'; // upload directory
         $targetFile = $targetDir . basename($_FILES['profilePic']['name']); // this points to the original file in the disk
         $uploadOk = 1;
         $imginputType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // this stores the extension
+        $imageName = $_POST['username'] . '.' . $imginputType;
 
         // auto-generate a name for the image based on the user name
         $targetFile = $targetDir . $_POST['username'] . '.' . $imginputType; // images should be named after the profile, evidently
@@ -57,8 +43,6 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
             $uploadOk = 0;
         }
 
-
-
         // If all checks pass, move the uploaded file to the target directory
         if ($uploadOk == 1) {
             if (move_uploaded_file($_FILES['profilePic']['tmp_name'], $targetFile)) {
@@ -69,6 +53,20 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
         }
 
     }
+
+    $stmt = $conexion->prepare($query);
+
+    $password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+
+    $stmt->bindParam(':email', $_POST['email']);
+    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':userName', $_POST['username']);
+    $stmt->bindParam(':birthDate', $_POST['date']);
+    $stmt->bindParam(':creationDate', $date);
+    $stmt->bindParam(':phoneNumber', $_POST['phone']);
+    $stmt->bindParam(':profilePic', $imageName);
+    $stmt->bindParam(':description', $_POST['description']);
+
 
     if ($stmt->execute()) {
         $message = 'Successfully created new user';
