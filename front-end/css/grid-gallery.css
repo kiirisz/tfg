@@ -34,6 +34,17 @@ img {
   transform: scale(1.04);
 }
 
+.postInformation{
+  opacity: 0;
+}
+.grid-item:hover .postInformation{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+.postCaption{
+  mix-blend-mode: difference;
+  color: white;
+}
 
 @media (min-width: 600px) {
   .wide {
