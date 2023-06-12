@@ -832,19 +832,19 @@ footer>a:hover {
 /* Track */
 
 ::-webkit-scrollbar-track {
-  background: rgb(249 168 212);
+  background: #1E293B;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(159, 236, 72);
+  background: #EF4444;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(159, 236, 72);
+  background: #a33030;
 }
 
 .profilegrid{
