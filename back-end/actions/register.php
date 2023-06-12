@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $stmt = $conexion->prepare($query);
 
     $password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
-    $futureImageName = $_POST['username'] . '.' . $imginputType;
+    $imageName = $_POST['username'] . '.' . $imginputType;
 
     $stmt->bindParam(':email', $_POST['email']);
     $stmt->bindParam(':password', $password);
@@ -24,7 +24,7 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['username'])
     $stmt->bindParam(':birthDate', $_POST['date']);
     $stmt->bindParam(':creationDate', $date);
     $stmt->bindParam(':phoneNumber', $_POST['phone']);
-    $stmt->bindParam(':profilePic', $futureImageName);
+    $stmt->bindParam(':profilePic', $imageName);
 
     if (isset($_FILES['profilePic'])) {
         $targetDir = '../db/uploads/profile/'; // upload directory
