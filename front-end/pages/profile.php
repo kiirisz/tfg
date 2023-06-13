@@ -37,10 +37,16 @@ include("../../back-end/actions/retrieve.php");
                     </a>
                     <p class="text-white">'. $post['caption'].
                     '</p>
-                    <form action="../../front-end/pages/morePost.php" method="post">
-                        <input type="hidden" value="'.$post['idPost'].'" name="post_id" id="post_id">
-                        <input type="submit" value="See full post" class="btn more-post">
-                    </form>
+                    <div class="buttons">
+                        <form action="../../front-end/pages/morePost.php" method="post">
+                            <input type="hidden" value="'.$post['idPost'].'" name="post_id" id="post_id">
+                            <input type="submit" value="See full post" class="btn more-post">
+                        </form>
+                        <form action="../../back-end/actions/removePost.php" method="post">
+                            <input type="hidden" value="'.$post['idPost'].'" name="post_id" id="post_id">
+                            <input type="submit" value="Remove post" class="btn remove">
+                        </form>
+                    </div>
                 </div>
             </div>
             ';

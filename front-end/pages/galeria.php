@@ -25,7 +25,7 @@ $postsList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
                 <img src="../../back-end/db/uploads/profile/'.$userList['profilePic'].'"
                 alt="'.($userList['userName']).'\'s Profile Picture" 
                 class="h-6 w-6 object-cover rounded m-1">
-                <a href="" class=" flex">
+                <a href="#" class="flex">
                     <form action="'.$url.'/front-end/pages/usersPage.php" method="post">
                         <input type="hidden" value="'. $userList['idUser'] .'" name="user_id" id="user_id">
                         <input type="submit" value="@'. $userList['userName'].'">
