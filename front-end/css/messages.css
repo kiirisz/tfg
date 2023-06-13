@@ -34,6 +34,8 @@ article.main{
     margin-top: 30px;
     min-height: 70vh;
     overflow: auto;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 .messages-container{
     display: flex;
@@ -195,9 +197,4 @@ body.dark .form-select{
     background-color: #1e293b;
     color: #f6f5ff;
     border-bottom: 2px solid var(--primary-color-reverse);
-}
-@media only screen and (max-width: 1560px) {
-    .messages-container-seen{
-        margin-top: 10px;
-    }
 }
