@@ -76,10 +76,7 @@ include("head.php");
                         </div>  
                         <span class="mode-text text">Dark mode</span>
                         <div class="toggle-switch">
-                            <span class="switch">
-                                <!--<i class='bx bxs-sun bx-xs' id="sun-icon"></i>
-                                <i class='bx bxs-moon bx-xs' id="moon-icon"></i>-->
-                            </span>
+                            <span class="switch"></span>
                         </div>
                     </li>
                 </div>
