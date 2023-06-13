@@ -5,19 +5,27 @@ include("../../back-end/actions/retrieve.php");
 
 <main class="home h-full bg-slate-200 w-full flex flex-col items-center">
     <!-- heading -->
-    <div class="bg-gradient-to-r from-red-500 to-yellow-500 text-white w-full flex">
-        <img src="../../back-end/db/uploads/profile/<?php echo ($pfp) ?>"
-            alt="<?php echo ($_SESSION['username']) ?>'s Profile Picture" 
-            class="m-5 h-40 w-40 object-cover rounded">
-        <aside class="p-5">
-            <h1 class="text-4xl font-bold">
-                <?php echo ($_SESSION['username']) ?>
-            </h1> <br><br>
+    <div class="userHeader bg-gradient-to-r from-red-500 to-yellow-500 text-white w-full flex">
+        <div>
+            <img src="../../back-end/db/uploads/profile/<?php echo ($pfp) ?>"
+                alt="<?php echo ($_SESSION['username']) ?>'s Profile Picture" 
+                class="m-5 h-40 w-40 object-cover rounded">
+            <aside class="p-5">
+                <h1 class="text-4xl font-bold">
+                    <?php echo ($_SESSION['username']) ?>
+                </h1> <br><br>
 
-            <p>
-                <?php echo $desc?>
-            </p>
-        </aside>
+                <p>
+                    <?php echo $desc?>
+                </p>
+            </aside>
+        </div>
+        <div class="editUser">
+            <form action="../../front-end/pages/editUser.php" method="post">
+                <input type="hidden" value="<?php echo($_SESSION['user_id'])?>" name="user_id" id="user_id">
+                <input type="submit" value="Edit your profile" class="btn remove">
+            </form>
+        </div>
     </div>
 
 

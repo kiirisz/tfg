@@ -1,3 +1,12 @@
+.userHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.userHeader div {
+    display: flex;
+    flex-direction: row;
+}
 .buttons {
     display: flex;
     justify-content: space-between;
