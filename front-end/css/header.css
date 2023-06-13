@@ -110,3 +110,22 @@ b{
     justify-content: center;
     font-weight: bold;
 }
+
+
+body .logo_basic{
+  display: unset;
+  opacity: 1;
+}
+body .logo_dark{
+  display: none;
+  opacity: 0;
+}
+
+body.dark .logo_basic{
+  display: none;
+  opacity: 0;
+}
+body.dark .logo_dark{
+  display: unset;
+  opacity: 1;
+}
