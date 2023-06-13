@@ -23,7 +23,7 @@ include("../../back-end/actions/retrieve.php");
         <div class="editUser">
             <form action="../../front-end/pages/editUser.php" method="post">
                 <input type="hidden" value="<?php echo($_SESSION['user_id'])?>" name="user_id" id="user_id">
-                <input type="submit" value="Edit your profile" class="btn remove">
+                <input type="submit" value="Edit your profile" class="btn edit">
             </form>
         </div>
     </div>

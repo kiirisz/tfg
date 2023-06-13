@@ -20,7 +20,7 @@ include("head.php");
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
             </header>
-            <div class="menu-bar">
+            <div i="menu-bar" class="menu-bar">
                 <div class="menu">
                     <div>
                         <div id="display" class="text"></div>

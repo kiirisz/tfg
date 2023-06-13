@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .userHeader div {
     display: flex;
@@ -19,4 +20,20 @@
     height: 30px;
     font-size: 0.8em !important;
     font-weight: bold !important;
+}
+
+.editUser .edit {
+    color: black !important;
+    height: 30px;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    background-color: white !important;
+    margin: 30px;
+}
+.editUser .edit:hover {
+    color: white !important;
+    height: 30px;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    background-color: black !important;
 }

@@ -19,45 +19,45 @@ button, input, optgroup, select, textarea {
     margin: 0;
     padding: 0;
 }
-  .grid {
-    display: grid;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .h-40 {
-    height: 10rem;
-  }
-  
-  .h-6 {
-    height: 1.5rem;
-  }
-  
-  .h-full {
-    height: 100%;
-  }
-  
-  .h-screen {
-    height: 100vh;
-  }
-  
-  .w-1\/2 {
-    width: 50%;
-  }
-  
-  .w-40 {
-    width: 10rem;
-  }
-  
-  .w-6 {
-    width: 1.5rem;
-  }
-  
-  .w-full {
-    width: 100%;
-  }
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
 ::-webkit-scrollbar-track {
     background: #1E293B;
 }
@@ -69,11 +69,11 @@ button, input, optgroup, select, textarea {
 ::-webkit-scrollbar-thumb:hover {
     background: #a33030;
 }
+/**/
 b{
     opacity: 0;
     display: none;
 }
-/**/
 .navbar-background {
     height: 100vh;
     position: fixed;
@@ -110,7 +110,12 @@ b{
     justify-content: center;
     font-weight: bold;
 }
-
+.selected {
+    background-color: var(--primary-color-reverse) !important;
+}
+.selected i, .selected span{
+    color: var(--sidebar-color) !important;
+}
 
 body .logo_basic{
   display: unset;

@@ -22,21 +22,28 @@ $postsList = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
         <?php
             echo '
             <div class="postInformation w-full h-full opacity-0 hover:opacity-80 bg-black transition-opacity duration-100 p-2">
-                <img src="../../back-end/db/uploads/profile/'.$userList['profilePic'].'"
-                alt="'.($userList['userName']).'\'s Profile Picture" 
-                class="h-6 w-6 object-cover rounded m-1">
-                <a href="#" class="flex">
-                    <form action="'.$url.'/front-end/pages/usersPage.php" method="post">
+                <div class="sameRow">
+                  <div>
+                    <img src="../../back-end/db/uploads/profile/'.$userList['profilePic'].'"
+                    alt="'.($userList['userName']).'\'s Profile Picture" 
+                    class="h-6 w-6 object-cover rounded m-1">
+                    <a href="#" class="flex">
+                      <form action="'.$url.'/front-end/pages/usersPage.php" method="post">
                         <input type="hidden" value="'. $userList['idUser'] .'" name="user_id" id="user_id">
                         <input type="submit" value="@'. $userList['userName'].'">
+                      </form>
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <form action="../../front-end/pages/morePost.php" method="post">
+                      <input type="hidden" value="'.$posts['idPost'].'" name="post_id" id="post_id">
+                      <input type="submit" value="See full post" class="btn more-post">
                     </form>
-                </a>
+                  </div>
+                </div>
                 <p class="postCaption">'. $posts['caption'].
                 '</p>
-                <form action="../../front-end/pages/morePost.php" method="post">
-                  <input type="hidden" value="'.$posts['idPost'].'" name="post_id" id="post_id">
-                  <input type="submit" value="See full post" class="btn more-post">
-                </form>
             </div>
             ';
           ?>

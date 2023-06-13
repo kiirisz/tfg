@@ -28,6 +28,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  image-rendering: pixelated;
 }
 
 .grid-item:hover {
@@ -35,6 +36,11 @@ img {
   transform: scale(1.04);
 }
 
+.sameRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .postInformation{
   opacity: 0;
 }
@@ -42,9 +48,11 @@ img {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.616);
 }
-.postCaption{
+.postCaption {
   mix-blend-mode: difference;
   color: white;
+  max-height: 75px;
+  overflow: auto;
 }
 .more-post {
   color: black !important;

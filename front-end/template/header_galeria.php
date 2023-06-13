@@ -22,6 +22,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo $url;?>/front-end/js/search.js"></script>
     <script type="text/javascript" src="<?php echo $url;?>/front-end/js/dselect.js"></script>
+    <script type="text/javascript" src="<?php echo $url;?>/front-end/js/selectedPage.js"></script>
 </head>
 
 <body class="font-dmono ">

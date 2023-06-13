@@ -12,6 +12,10 @@ $SQLsequence = $conexion->prepare("SELECT * FROM users WHERE email = '".$selecte
 $SQLsequence->execute();
 $selectedUser = $SQLsequence->fetch();
 
+$SQLsequence = $conexion->prepare("SELECT * FROM users");
+$SQLsequence->execute();
+$allUsers = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);
+
 $SQLsequence = $conexion->prepare("SELECT * FROM comments WHERE IdPost = '".$selectedPost['idPost']."'");
 $SQLsequence->execute();
 $commentsPost = $SQLsequence->fetchAll(PDO::FETCH_ASSOC);

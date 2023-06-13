@@ -11,7 +11,7 @@ include("../../back-end/actions/newComment.php");
                 <div class="row" id="user">
                     <div class="user-side">
                         <img class="profile-pic" src="<?php echo $url;?>/back-end/db/uploads/profile/<?php echo $selectedUser['profilePic']; ?>" alt="profile picture">
-                        <a href="" class="text">
+                        <a href="#" class="text">
                             <form action="<?php echo $url;?>/front-end/pages/usersPage.php" method="post">
                                 <input type="hidden" value="<?php echo $selectedUser['idUser']; ?>" name="user_id" id="user_id">
                                 <input type="submit" value="@<?php echo $selectedUser['userName']; ?>" class="user-name">
@@ -41,9 +41,17 @@ include("../../back-end/actions/newComment.php");
                         <?php foreach($commentsPost as $comment){ ?>
                             <div class="comments-info text">
                                 <div class="comment-email">
-                                    <a href="" class="text">
+                                    <a href="#" class="text">
                                         <form action="<?php echo $url;?>/front-end/pages/usersPage.php" method="post">
-                                            <input type="hidden" value="<?php echo $selectedUser['idUser']; ?>" name="user_id" id="user_id">
+                                            <input type="hidden" value="<?php 
+                                                foreach($allUsers as $users){
+                                                    $a = $comment['user'];
+                                                    if ($a == $users['userName']) {
+                                                        echo $users['idUser']; 
+                                                        break;
+                                                    }
+                                                }
+                                            ?>" name="user_id" id="user_id">
                                             <input type="submit" value="@<?php echo $comment['user']; ?>">
                                         </form>
                                     </a>
