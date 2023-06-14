@@ -134,3 +134,8 @@ body.dark .logo_dark{
   display: unset;
   opacity: 1;
 }
+
+.main-side {
+  height: auto;
+  min-height: 100vh;
+}
