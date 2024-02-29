@@ -17,6 +17,7 @@
     --toggle-arrow: #eb0000;
     --toggle-color: #1e293b;
     --text-color: #1e293b;
+    --close-button: #ffffff;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -45,6 +46,7 @@ body.dark{
     --toggle-arrow: #ccc;
     --toggle-color: #ccc;
     --text-color: #ccc;
+    --close-button: #ccc;
 }
 
 /* ===== Sidebar ===== */
@@ -352,12 +354,13 @@ body.dark .switch::before{
     left: 20px;
 }
 
-.home{
+.home {
     position: absolute;
     top: 0;
     top: 0;
     left: 250px;
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content !important;
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);

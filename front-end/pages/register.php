@@ -7,7 +7,7 @@ include("../template/head.php");
 <body class="font-dmono ">
 
     <main class=" flex">
-        <main class=" md:w-1/2 w-full h-screen bg-gray-200 flex flex-col items-center text-center">
+        <main class="main-side md:w-1/2 w-full h-screen bg-gray-200 flex flex-col items-center text-center">
             <section class=" my-auto">
                 <div>
                     <img src="../../img/logo.svg" alt="kuenty logo" class=" w-40 mx-auto">
@@ -25,6 +25,10 @@ include("../template/head.php");
 
                     <label for="email" class="text-2xl">Email</label><br>
                     <input type="email" name="email" id="email" required
+                        class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
+
+                    <label for="description" class="text-2xl">Description</label><br>
+                    <input type="text" name="description" id="description"
                         class="bg-inherit border-b-gray-400 border-solid border-2 hover:border-b-gray-600 transition ease-in-out "><br><br>
 
                     <label for="date" class="text-2xl">Date of Birth</label><br>
@@ -49,8 +53,4 @@ include("../template/head.php");
             </section>
         </main>
 
-        <aside class=" bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden md:flex"></aside>
-
-    </main>
-
-    <?php include("../template/footer.php"); ?>
+        <aside class="main-side bg-gradient-to-r from-red-500 to-yellow-500 h-screen w-1/2 hidden md:flex"></aside>

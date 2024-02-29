@@ -584,6 +584,10 @@ video {
   width: 10rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -602,14 +606,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .gap-3 {
@@ -698,20 +694,21 @@ video {
   --tw-gradient-to: #eab308 var(--tw-gradient-to-position);
 }
 
-.bg-center {
-  background-position: center;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
   padding: 0.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-5 {
@@ -830,21 +827,16 @@ footer>a:hover {
 }
 
 /* Track */
-
 ::-webkit-scrollbar-track {
-  background: rgb(249 168 212);
+  background: #1E293B;
 }
-
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
-  background: rgb(159, 236, 72);
+  background: #EF4444;
 }
-
 /* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(159, 236, 72);
+  background: #a33030;
 }
 
 .profilegrid{

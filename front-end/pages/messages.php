@@ -20,8 +20,8 @@ include("../../back-end/actions/sendMessage.php");
     </article>
     <div class="top-section">
         <div>
-            <button class="sendMesage text bg-500 hover:bg-red-900 transition ease-in-out p-2 font-bold rounded-md m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Send message</button>
             <h3 class="text">Your messages</h3>
+            <button class="sendMesage text bg-500 p-2 font-bold rounded-md m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Send message</button>
         </div>
     </div>
     <article class="main">
@@ -101,7 +101,7 @@ include("../../back-end/actions/sendMessage.php");
                                 </select>
                             </div>
                             <div class="row">
-                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" aria-label="Subject">
+                                <input type="text" name="subject" id="sendSubject" class="form-control" placeholder="Subject" aria-label="Subject">
                             </div>
                             <div class="row">
                                 <textarea class="form-control" name="message" id="message" placeholder="Message" aria-label="Message"></textarea>
@@ -109,7 +109,7 @@ include("../../back-end/actions/sendMessage.php");
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <input type="submit" value="Enviar">
+                            <input type="submit" class="btn" value="Send" id="sendMessage">
                         </div>
                     </form>
                 </div>
@@ -128,6 +128,3 @@ include("../../back-end/actions/sendMessage.php");
         include("../../back-end/actions/updateSeen.php");
     ?>
 </script>
-
-<?php
-include("../template/footer.php");?>

@@ -19,9 +19,11 @@ article.header input{
 .top-section>div{
     width: 50%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
 }
 
 article.main{
@@ -32,11 +34,13 @@ article.main{
     margin-top: 30px;
     min-height: 70vh;
     overflow: auto;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 .messages-container{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
 }
 .messages-container-not-seen{
     width: fit-content;
@@ -138,8 +142,59 @@ input#search {
     background-color: var(--primary-color-light);
     border-bottom: 2px solid var(--primary-color-reverse);
 }
-@media only screen and (max-width: 1560px) {
-    .messages-container-seen{
-        margin-top: 10px;
-    }
+.sendMesage:hover {
+    transition: all 0.15s ease-in-out;
+    color: var(--primary-color-light);
+    background-color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/*Send message pop up*/
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: #e4e9f7;
+}
+.row{
+    padding-bottom: 10px;
+}
+.modal-header, .modal-footer{
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+}
+.btn-close {
+    background-color: var(--close-button) !important;
+}
+#userRecipient{
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color-reverse);
+}
+.form-select{
+    background-image: url("../../img/arrow.svg") !important;
+    background-size: 15px !important;
+}
+body.dark .form-select{
+    background-image: url("../../img/arrow_dark.svg") !important;
+    background-size: 15px !important;
+}
+#sendSubject{
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color-reverse);
+}
+#message{
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color-reverse);
+    height: 100px;
+}
+.modal-footer {
+    justify-content: space-evenly !important;
+}
+#sendMessage{
+    background-color: #1e293b;
+    color: #f6f5ff;
+    border-bottom: 2px solid var(--primary-color-reverse);
 }

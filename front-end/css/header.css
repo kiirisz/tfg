@@ -19,7 +19,61 @@ button, input, optgroup, select, textarea {
     margin: 0;
     padding: 0;
 }
-/*#3772FF*/
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+::-webkit-scrollbar-track {
+    background: #1E293B;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #EF4444;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a33030;
+}
+/**/
+b{
+    opacity: 0;
+    display: none;
+}
 .navbar-background {
     height: 100vh;
     position: fixed;
@@ -55,4 +109,33 @@ button, input, optgroup, select, textarea {
     background-color: var(--primary-color-light);
     justify-content: center;
     font-weight: bold;
+}
+.selected {
+    background-color: var(--primary-color-reverse) !important;
+}
+.selected i, .selected span{
+    color: var(--sidebar-color) !important;
+}
+
+body .logo_basic{
+  display: unset;
+  opacity: 1;
+}
+body .logo_dark{
+  display: none;
+  opacity: 0;
+}
+
+body.dark .logo_basic{
+  display: none;
+  opacity: 0;
+}
+body.dark .logo_dark{
+  display: unset;
+  opacity: 1;
+}
+
+.main-side {
+  height: auto !important;
+  min-height: 100vh !important;
 }

@@ -2,10 +2,13 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(150px, auto);
   gap: 20px;
   padding: 20px;
   grid-auto-flow: dense;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 img {
@@ -18,15 +21,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-
   background-color: #282c34;
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
-
+  height: 150px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  image-rendering: pixelated;
 }
 
 .grid-item:hover {
@@ -34,6 +36,31 @@ img {
   transform: scale(1.04);
 }
 
+.sameRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.postInformation{
+  opacity: 0;
+}
+.grid-item:hover .postInformation{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+.postCaption {
+  mix-blend-mode: difference;
+  color: white;
+  max-height: 75px;
+  overflow: auto;
+}
+.more-post {
+  color: black !important;
+  height: 30px;
+  font-size: 0.8em !important;
+  font-weight: bold !important;
+  background-color: white !important;
+}
 
 @media (min-width: 600px) {
   .wide {

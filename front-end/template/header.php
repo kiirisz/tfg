@@ -13,13 +13,14 @@ include("head.php");
                 <div class="image-text">
                     <span class="image">
                         <a href="<?php echo $url;?>/front-end/pages/galeria.php">
-                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="Kuenty Logo">
+                            <img class="logo_dark" src="<?php echo $url;?>/img/logo.svg" alt="Kuenty Logo">
+                            <img class="logo_basic" src="<?php echo $url;?>/img/logo_basic.svg" alt="Kuenty Logo">
                         </a>
                     </span>
                 </div>
                 <i class='bx bx-chevron-right toggle'></i>
             </header>
-            <div class="menu-bar">
+            <div i="menu-bar" class="menu-bar">
                 <div class="menu">
                     <div>
                         <div id="display" class="text"></div>
@@ -75,10 +76,7 @@ include("head.php");
                         </div>  
                         <span class="mode-text text">Dark mode</span>
                         <div class="toggle-switch">
-                            <span class="switch">
-                                <!--<i class='bx bxs-sun bx-xs' id="sun-icon"></i>
-                                <i class='bx bxs-moon bx-xs' id="moon-icon"></i>-->
-                            </span>
+                            <span class="switch"></span>
                         </div>
                     </li>
                 </div>

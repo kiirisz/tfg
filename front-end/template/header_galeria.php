@@ -22,6 +22,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo $url;?>/front-end/js/search.js"></script>
     <script type="text/javascript" src="<?php echo $url;?>/front-end/js/dselect.js"></script>
+    <script type="text/javascript" src="<?php echo $url;?>/front-end/js/selectedPage.js"></script>
 </head>
 
 <body class="font-dmono ">
@@ -34,7 +35,8 @@
                 <div class="image-text">
                     <span class="image">
                         <a href="<?php echo $url;?>/front-end/pages/galeria.php">
-                            <img class="" src="<?php echo $url;?>/img/logo.svg" alt="">
+                            <img class="logo_dark" src="<?php echo $url;?>/img/logo.svg" alt="Kuenty Logo">
+                            <img class="logo_basic" src="<?php echo $url;?>/img/logo_basic.svg" alt="Kuenty Logo">
                         </a>
                     </span>
                 </div>
